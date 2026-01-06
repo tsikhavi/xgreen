@@ -7,7 +7,237 @@
     <title>xGreen.Energy (XRG) - First Tokenized Green Energy Asset on XRP Ledger</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-   
+   <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+        background-color: #f8f9fa; /* LIGHT BACKGROUND */
+        color: #333; /* DARK TEXT */
+        line-height: 1.6;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Header Styles */
+    header {
+        background: linear-gradient(135deg, #0a5c36 0%, #0d8c4d 100%);
+        color: white;
+        padding: 20px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo {
+        max-width: 200px;
+        height: auto;
+    }
+    
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(rgba(10, 92, 54, 0.85), rgba(13, 140, 77, 0.9)), url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 120px 20px;
+        margin-bottom: 60px;
+    }
+    
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero p {
+        font-size: 22px;
+        max-width: 800px;
+        margin: 0 auto 30px;
+        font-weight: 300;
+    }
+    
+    .hero-tagline {
+        font-size: 28px;
+        font-weight: 500;
+        color: #d4edda;
+        margin-top: 20px;
+        font-style: italic;
+    }
+    
+    /* About Section */
+    .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+        color: #0a5c36; /* GREEN TITLES */
+        font-size: 36px;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background-color: #4cd964;
+        border-radius: 2px;
+    }
+    
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        margin-bottom: 80px;
+    }
+    
+    .about-card {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+        color: #333; /* DARK TEXT FOR CARDS */
+    }
+    
+    .about-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-header {
+        background-color: #0d8c4d;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    
+    .card-body {
+        padding: 25px;
+    }
+    
+    .card-body p {
+        color: #555;
+        margin-bottom: 15px;
+    }
+    
+    .energy-icon {
+        font-size: 40px;
+        color: #0d8c4d;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    /* Mission Section */
+    .mission {
+        background-color: #e8f5e9;
+        padding: 80px 20px;
+        margin: 60px 0;
+        text-align: center;
+        color: #333; /* DARK TEXT */
+    }
+    
+    .mission h2 {
+        color: #0a5c36;
+        margin-bottom: 30px;
+    }
+    
+    .mission-statement {
+        font-size: 20px;
+        max-width: 900px;
+        margin: 0 auto 40px;
+        font-weight: 500;
+        color: #2d6a4f;
+    }
+    
+    .mission-highlight {
+        background-color: #0d8c4d;
+        color: white;
+        padding: 25px;
+        border-radius: 10px;
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 18px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Features Section */
+    .features {
+        margin: 80px 0;
+    }
+    
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+    }
+    
+    .feature-card {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        border-top: 5px solid #4cd964;
+        color: #333; /* DARK TEXT */
+    }
+    
+    .feature-card h3 {
+        color: #0a5c36;
+        margin-bottom: 15px;
+        font-size: 24px;
+    }
+    
+    /* Video Section */
+    .video-section {
+        text-align: center;
+        margin: 80px 0;
+        padding: 40px 20px;
+        background-color: #f1f8e9;
+        border-radius: 10px;
+        color: #333; /* DARK TEXT */
+    }
+    
+    .video-placeholder {
+        width: 100%;
+        max-width: 800px;
+        height: 450px;
+        background-color: #333;
+        margin: 30px auto;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+ 
+</style>
     
 </head>
 <body>
