@@ -21,7 +21,6 @@
         
         /* Header Styles */
         header {
-            background: #000;
             color: white;
             padding: 20px 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -34,7 +33,6 @@
     display: grid;
     place-items: center;    /* Centers both horizontally and vertically */
     height: 100vh;
-                          background: #000;
 }
 
 .logo {
