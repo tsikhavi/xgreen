@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +9,610 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-  
+        body {
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            color: black;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+        }
+
+        .logo {
+            min-width: 300px;
+            /* Control logo size */
+            min-height: 300px;
+        }
+
+        /* Hero Section */
+        .hero {
+            
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 22px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+        }
+
+        .hero-tagline {
+            font-size: 28px;
+            font-weight: 500;
+            color: #d4edda;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        /* About Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #0a5c36;
+            font-size: 36px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: #4cd964;
+            border-radius: 2px;
+
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .about-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            background-color: #0d8c4d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-body p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .energy-icon {
+            font-size: 40px;
+            color: #0d8c4d;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        /* Mission Section */
+        .mission {
+            background-color: #e8f5e9;
+            padding: 80px 20px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .mission h2 {
+            color: #0a5c36;
+            margin-bottom: 30px;
+        }
+
+        .mission-statement {
+            font-size: 20px;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            font-weight: 500;
+            color: #2d6a4f;
+        }
+
+        .mission-highlight {
+            background-color: #0d8c4d;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Features Section */
+        .features {
+            margin: 80px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border-top: 5px solid #4cd964;
+        }
+
+        .feature-card h3 {
+            color: #0a5c36;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        /* Video Section */
+        .video-section {
+            text-align: center;
+            margin: 80px 0;
+            padding: 40px 20px;
+            background-color: #f1f8e9;
+            border-radius: 10px;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            background-color: #333;
+            margin: 30px auto;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-placeholder:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #0a5c36, #4cd964);
+            opacity: 0.7;
+        }
+
+        .video-play-btn {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #0d8c4d;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .video-play-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Contact Section */
+        .contact {
+            margin: 80px 0;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #0a5c36;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #0d8c4d;
+            outline: none;
+        }
+
+        .file-upload {
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 2px dashed #ddd;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: border 0.3s;
+        }
+
+        .file-upload:hover {
+            border-color: #0d8c4d;
+        }
+
+        .submit-btn {
+            background-color: #0d8c4d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            font-weight: 600;
+        }
+
+        .submit-btn:hover {
+            background-color: #0a5c36;
+        }
+
+        .contact-info {
+            padding: 20px;
+        }
+
+        .info-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+        }
+
+        .info-card h3 {
+            color: #0a5c36;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .hours-table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+        }
+
+        .hours-table td:first-child {
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a5c36;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 80px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #a8e6cf;
+        }
+
+        .footer-about {
+            line-height: 1.8;
+        }
+
+        .footer-section h3 {
+
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #a8e6cf;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #4cd964;
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: #4cd964;
+        }
+
+        .telegram-cta {
+            background-color: #2d6a4f;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .telegram-cta a {
+            color: #a8e6cf;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .telegram-cta a:hover {
+            text-decoration: underline;
+        }
+
+        .cookie-notice {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            color: #a8e6cf;
+        }
+
+        /* Modal for Video */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 90%;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            color: #333;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #0a5c36;
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                padding: 15px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 80px 20px;
+
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            .about-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .video-placeholder {
+                height: 250px;
+            }
+        }
     </style>
-    
+
 </head>
+
 <body>
     <!-- Header -->
     <header>
-       <div class="logo-container">
-    <a class="logo" href="#contact">
-        <img src="images/logo.webp" alt="logo">
-    </a>
-</div>
-        
+        <div class="logo-container">
+            <a class="logo" href="#contact">
+                <img src="images/logo.webp" alt="logo">
+            </a>
+        </div>
+
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>xGreen.Energy (XRG)</h1>
-            <p>The first tokenized green energy asset on XRP Ledger, implemented in compliance with the ISO 20022 standard.</p>
+            <h1>xGreen.Energy (XRG) - 
+            The first tokenized green energy asset on XRP Ledger</h1>
+            <tr></tr>
+            <p>implemented in compliance with the ISO 20022 standard.</p>
             <p class="hero-tagline">We turn energy into value, not by depleting nature, but by restoring its balance.</p>
         </div>
     </section>
@@ -48,7 +631,7 @@
                     <p>Wind turbines on land and water with solar panels on masts for maximum efficiency.</p>
                 </div>
             </div>
-            
+
             <!-- Solar Energy Card -->
             <div class="about-card">
                 <div class="card-header">Solar Energy</div>
@@ -59,7 +642,7 @@
                     <p>Panels on water, land, and structures. Mirrors and lenses system for catching and focusing light.</p>
                 </div>
             </div>
-            
+
             <!-- Biofuel Production Card -->
             <div class="about-card">
                 <div class="card-header">Biofuel Production</div>
@@ -70,7 +653,7 @@
                     <p>Cannabis and algae for eco-friendly fuel, transport, and export.</p>
                 </div>
             </div>
-            
+
             <!-- Geothermal Energy Card -->
             <div class="about-card">
                 <div class="card-header">Geothermal Energy</div>
@@ -82,7 +665,7 @@
                 </div>
             </div>
 
-<!-- Green Clean Mining Card -->
+            <!-- Green Clean Mining Card -->
             <div class="about-card">
                 <div class="card-header">Green Clean Mining</div>
                 <div class="card-body">
@@ -92,7 +675,7 @@
                     <p>Green energy + liquid immersion cooling = eco-friendly mining with zero carbon footprint.</p>
                 </div>
             </div>
-            
+
             <!-- Ripple Energy Card -->
             <div class="about-card">
                 <div class="card-header">Ripple Energy</div>
@@ -111,11 +694,11 @@
         <div class="container">
             <h2 class="section-title">Our Mission</h2>
             <p class="mission-statement">Contribute to Nature – Reduce CO₂ Emissions! Be part of a sustainable future: lower your carbon footprint, invest in carbon credits, and support green technologies.</p>
-            
+
             <div class="mission-highlight">
                 <p>xGreen.Energy (XRG) is the new reality of a self-sustaining energy economy, where green energy is a fundamental asset, tokenized into XRG and implemented on the XRP Ledger under the ISO 20022 standard.</p>
             </div>
-            
+
             <p class="mission-statement" style="margin-top: 40px;">Protecting nature and reducing CO₂ emissions is everyone's responsibility. The future of our planet depends on the actions we take today!</p>
         </div>
     </section>
@@ -128,12 +711,12 @@
                 <h3>Connecting Gameplay in Real</h3>
                 <p>Connect the two worlds of digital assets and physical green energy production.</p>
             </div>
-            
+
             <div class="feature-card">
                 <h3>New Standard Class of Assets</h3>
                 <p>Tokenization of green energy solutions creating a new asset class on the XRP Ledger.</p>
             </div>
-            
+
             <div class="feature-card">
                 <h3>Manage Your Energy</h3>
                 <p>Energy in everything around us - harness it efficiently and sustainably.</p>
@@ -163,18 +746,18 @@
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
 
-</div>
-                    
+                    </div>
+
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Attachments (Optional)</label>
                         <div class="file-upload" id="fileUpload">
@@ -182,24 +765,24 @@
                         </div>
                         <input type="file" id="fileInput" style="display: none;">
                     </div>
-                    
+
                     <div class="form-group">
                         <div class="g-recaptcha" data-sitekey="6LfL6cApAAAAAKGQZcBqnyw2qg"></div>
                     </div>
-                    
+
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
             </div>
-            
+
             <!-- Contact Info -->
             <div class="contact-info">
                 <div class="info-card">
                     <h3><i class="fas fa-map-marker-alt"></i> Visit Us</h3>
                     <p>Better yet, see us in person! We love our customers, so feel free to visit during hours.</p>
                     <p><strong>xGreen.Energy (XRG)</strong><br>
-                    Ave of Stars, Tsim Sha Tsui, Hong Kong</p>
+                        Ave of Stars, Tsim Sha Tsui, Hong Kong</p>
                 </div>
-                
+
                 <div class="info-card">
                     <h3><i class="fas fa-clock"></i> Business Hours</h3>
                     <table class="hours-table">
@@ -246,24 +829,24 @@
                         <i class="fas fa-leaf"></i> xGreen.Energy
                     </div>
                     <p class="footer-about">xGreen.Energy (XRG) is the first tokenized green energy asset on XRP Ledger, creating a new reality of a self-sustaining energy economy.</p>
-                    
+
                     <div class="telegram-cta">
                         <p><strong>t.me/x_green_energy</strong></p>
                         <p>Get 10% Off Your First Contribution to Protecting Nature! Invest in the future, reduce CO₂, and support green technologies—start today!</p>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Quick Links</h3>
 
-<ul style="list-style: none;">
+                    <ul style="list-style: none;">
                         <li style="margin-bottom: 10px;"><a href="#home" style="color: #a8e6cf; text-decoration: none;">Home</a></li>
                         <li style="margin-bottom: 10px;"><a href="#about" style="color: #a8e6cf; text-decoration: none;">About Us</a></li>
                         <li style="margin-bottom: 10px;"><a href="#mission" style="color: #a8e6cf; text-decoration: none;">Our Mission</a></li>
                         <li style="margin-bottom: 10px;"><a href="#contact" style="color: #a8e6cf; text-decoration: none;">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Connect With Us</h3>
                     <div class="social-links">
@@ -272,13 +855,13 @@
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
-                    
+
                     <div class="cookie-notice">
                         <p>This website uses cookies. We use cookies to analyze website traffic and optimize your website experience. By accepting our use of cookies, your data will be aggregated with all other user data.</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="copyright">
                 <p>&copy; 2025 xGreen.Energy (XRG). All rights reserved. | This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" style="color: #a8e6cf;">Privacy Policy</a> and <a href="https://policies.google.com/terms" style="color: #a8e6cf;">Terms of Service</a> apply.</p>
             </div>
@@ -305,7 +888,7 @@
         document.getElementById('mobileMenuBtn').addEventListener('click', function() {
             document.getElementById('navMenu').classList.toggle('active');
         });
-        
+
         // Close mobile menu when clicking a link
         const navLinks = document.querySelectorAll('#navMenu a');
         navLinks.forEach(link => {
@@ -313,62 +896,62 @@
                 document.getElementById('navMenu').classList.remove('active');
             });
         });
-        
+
         // Video Modal Functionality
         const videoPlaceholder = document.getElementById('videoPlaceholder');
         const videoModal = document.getElementById('videoModal');
         const playVideoBtn = document.getElementById('playVideoBtn');
         const closeModalBtn = document.getElementById('closeModalBtn');
-        
+
         playVideoBtn.addEventListener('click', function() {
             videoModal.style.display = 'flex';
         });
-        
+
         closeModalBtn.addEventListener('click', function() {
 
-videoModal.style.display = 'none';
+            videoModal.style.display = 'none';
         });
-        
+
         // Close modal when clicking outside the modal content
         window.addEventListener('click', function(event) {
             if (event.target === videoModal) {
                 videoModal.style.display = 'none';
             }
         });
-        
+
         // File Upload Functionality
         const fileUpload = document.getElementById('fileUpload');
         const fileInput = document.getElementById('fileInput');
-        
+
         fileUpload.addEventListener('click', function() {
             fileInput.click();
         });
-        
+
         fileInput.addEventListener('change', function() {
             if (fileInput.files.length > 0) {
-                fileUpload.innerHTML = <i class="fas fa-check"></i> ${fileInput.files[0].name} selected;
+                fileUpload.innerHTML = < i class = "fas fa-check" > < /i> ${fileInput.files[0].name} selected;
                 fileUpload.style.borderColor = '#0d8c4d';
                 fileUpload.style.backgroundColor = '#e8f5e9';
             }
         });
-        
+
         // Form Submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Simple validation
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
-            
+
             if (name && email && message) {
                 // In a real application, you would send this data to a server
                 alert('Thank you for your message! We will get back to you soon.');
                 document.getElementById('contactForm').reset();
-                fileUpload.innerHTML = <i class="fas fa-cloud-upload-alt"></i> Click or drag files to upload;
+                fileUpload.innerHTML = < i class = "fas fa-cloud-upload-alt" > < /i> Click or drag files to upload;
                 fileUpload.style.borderColor = '#ddd';
                 fileUpload.style.backgroundColor = '#f8f9fa';
-                
+
                 // Reset reCAPTCHA (in a real app, you'd need to handle this properly)
                 if (window.grecaptcha) {
                     grecaptcha.reset();
@@ -377,15 +960,15 @@ videoModal.style.display = 'none';
                 alert('Please fill in all required fields.');
             }
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -397,4 +980,5 @@ videoModal.style.display = 'none';
         });
     </script>
 </body>
+
 </html>
