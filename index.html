@@ -78,6 +78,62 @@
             margin-top: 20px;
             font-style: italic;
         }
+        
+        /* Purple Whitepaper Button */
+.purple-white-paper-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Button styling */
+    background-color: #6d28d9; /* Purple color */
+    color: white !important; /* White text */
+    text-decoration: none;
+    
+    /* Rounded left and right */
+    border-radius: 50px; /* Fully rounded ends */
+    
+    /* Padding and sizing */
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    
+    /* Text styling */
+    text-transform: uppercase; /* CAPITALIZE TEXT */
+    letter-spacing: 0.5px;
+    
+    /* Border and transition */
+    border: 2px solid #6d28d9; /* Purple border matching background */
+    transition: all 0.3s ease-in-out;
+    
+    /* Shadow for depth */
+    box-shadow: 0 4px 12px rgba(109, 40, 217, 0.25);
+    
+    /* Prevent text wrapping */
+    white-space: nowrap;
+}
+
+/* Hover Effect */
+.purple-white-paper-btn:hover {
+    background-color: transparent; /* Colorless button */
+    color: #6d28d9 !important; /* Purple text */
+    border-color: #6d28d9; /* Purple border */
+    
+    /* Slight lift effect */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(109, 40, 217, 0.3);
+}
+
+/* Icon styling */
+.purple-white-paper-btn i {
+    margin-right: 10px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.purple-white-paper-btn:hover i {
+    color: #6d28d9; /* Purple icon on hover */
+}
 
         /* About Section */
         .section-title {
@@ -609,6 +665,12 @@
             <hr></hr>
             <p class="hero-tagline">We turn energy into value, not by depleting nature, but by restoring its balance.</p>
         </div>
+        
+        <a href="https://drive.google.com/file/d/1dEYiWMleLVbmF6wfXnthaRJEBZ2NvlkX/view?pli=1" 
+   target="_blank" 
+   class="purple-white-paper-btn">
+   </i> White Paper (ENG)
+</a>
     </section>
 
     <!-- About Section -->
