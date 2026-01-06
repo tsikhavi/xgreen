@@ -1,4 +1,3 @@
-
         * {
             margin: 0;
             padding: 0;
@@ -21,7 +20,7 @@
         
         /* Header Styles */
         header {
-            color: white;
+            color: black;
             padding: 20px 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             top: 0;
@@ -36,7 +35,7 @@
 }
 
 .logo {
-    max-width: 200px;       /* Control logo size */
+    max-width: 400px;       /* Control logo size */
     height: auto;
 }
         
@@ -577,4 +576,3 @@ font-size: 20px;
                 height: 250px;
             }
         }
-  
