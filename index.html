@@ -220,7 +220,7 @@ margin: auto;
     justify-content: center;
     max-width: 1000px;
     height: max-content;
-    gap: 0;
+    gap: 40px;
     margin: auto;
     
 
@@ -264,7 +264,7 @@ margin: auto;
     line-height: inherit;
     font-weight: 500;
     width: 65%;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 100px;
     font-size: medium;
     padding-top: 4px;
@@ -272,8 +272,9 @@ margin: auto;
 }
 
 .about-text p{
-    font-weight: 800;
-    padding-top: 8px;
+    font-weight: 600;
+    padding-top: 4px;
+    text-align: justify;
 }
 
 /* Mission Section */
@@ -666,6 +667,11 @@ video{
 
     }
 
+    .imgx{
+        width:8px;
+        height: 10px;
+    }
+
     .hero h1 {
         font-size: 32px;
     }
@@ -787,6 +793,8 @@ video{
     
     .aboutt-grid {
         grid-template-columns: repeat(3, minmax(300px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
     }
     
     .card-img {
@@ -1386,12 +1394,15 @@ video{
         <h2 style="text-align: center; ">
             XRG (green energy key)
         </h2>
-        <p class="hero-tag">
-            <img style="width: 18px; height: auto; margin-right: 2px;" src="images/X.png" alt="logox">Green.Energy (XRG) is the new reality of a self-sustaining energy economy, where green
-            energy
-            is a fundamental
-            asset, tokenized into XRG and implemented on the XRP Ledger in compliance with the ISO 20022 standard.</p>
-
+        <div >
+        
+        
+        <p class="hero-tag" style="line-height: 160%;">
+            <img class="imgx" style="width: 14px; height: 16px; margin-right: -4px;"  src="images/X1.svg" alt="logox">
+            Green.Energy (XRG) is the new reality of a self-sustaining energy economy, where green
+            energy is a fundamental asset, tokenized into XRG and implemented on the XRP Ledger 
+            in compliance with the ISO 20022 standard.</p>
+</div>
         <a href="#about" target="_self" class="purple-white-paper-btn"
             style="display: flex; text-transform: capitalize ; margin-top: 16px; margin-bottom: 20px ; margin-left: auto; margin-right: auto ;justify-content: center ; max-width: max-content;">
             Find out more
@@ -1610,7 +1621,7 @@ video{
                                     <p>We love our customers, so feel free to visit
                                         during working hours.</p>
                                     <br>
-                                    <h3><span style="color: chartreuse;">x</span>Green.Energy (XRG)</h3>
+                                    <h3><img style="width: 16px; height: 18px;" src="images/X1.svg" alt="logox">Green.Energy (XRG)</h3>
                                     <p> Ave of Stars, Tsim Sha Tsui, Hong Kong</p>
                                 </div>
                                 <div class="contact-mailto">
@@ -1703,9 +1714,9 @@ video{
 
                                 </p>
                                 <p>
-                                    <a href="/privacy" class="info-b">Privacy
+                                    <a href="/" class="info-b">Privacy
                                         Policy</a> |
-                                    <a href="/terms" class="info-b">Terms of
+                                    <a href="/" class="info-b">Terms of
                                         Service</a>
 
                                 </p>
