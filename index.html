@@ -272,7 +272,13 @@ margin: auto;
     margin-top: 20px;
     margin-left: 100px;
     font-size: medium;
+    padding-top: 4px;
 
+}
+
+.about-text p{
+    font-weight: 800;
+    padding-top: 8px;
 }
 
 /* Mission Section */
@@ -355,72 +361,6 @@ margin: auto;
     font-size: 24px;
 }
 
-/* Video Section */
-.video-section {
-    text-align: center;
-    margin: 80px 0;
-    padding: 40px 20px;
-    border-radius: 10px;
-}
-
-.video-placeholder {
-    width: 100%;
-    max-width: 800px;
-    height: 450px;
-    background-color: transparent;
-    margin: 30px auto;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.video-placeholder:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: black;
-    opacity: 0.7;
-}
-
-
-.video-play-btn {
-    position: relative;
-    z-index: 12;
-    background-color: rgba(255, 255, 255, 0.9);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    color: #7a4979;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.video-play-btn:hover {
-    transform: scale(1.1);
-}
-
-/* Ensure iframe is positioned correctly */
-#vimeoIframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: none;
-    border-radius: 10px; /* Match the placeholder border radius */
-}
 
 /* Contact Section */
 .contact {
@@ -606,7 +546,7 @@ footer {
 }
 
 .social-links {
-    display: flex;
+    display: inline-flex;
     margin-top: 20px;
     justify-content: center;
 }
@@ -615,8 +555,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     margin-right: 10px;
@@ -699,6 +639,10 @@ footer {
     border: none;
 }
 
+video{
+    width: min-content;
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     .hero h1 {
@@ -756,8 +700,13 @@ footer {
     font-weight: 500;
     text-align: center;
     line-height: 1.25;
+    text-decoration: none;
+    padding-bottom: 20px;
 }
 
+.cta-tel:hover{
+    color: #7a4979;
+}
 .cta-tel-2{
     color: rgb(145, 145, 145);
     text-align: center;
@@ -765,7 +714,8 @@ footer {
     font-size: 16px;
     line-height: 1.5;
     margin: auto;
-    padding-top: 20px;
+    padding: 20px;
+    width: 70%;
 }
 
 /* ============================================
@@ -960,6 +910,8 @@ footer {
     
     .cta-tel-2 {
         font-size: 14px;
+            width: 90%;
+
     }
 }
 
@@ -1117,11 +1069,11 @@ footer {
     
     .social-links {
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap:nowrap;
     }
     
     .social-links a {
-        margin: 5px;
+        margin: 3px;
     }
     
     .telegram-cta {
@@ -1136,6 +1088,8 @@ footer {
     .cta-tel-2 {
         font-size: 13px;
         padding-top: 15px;
+            width: 100%;
+
     }
     
     /* Cookie notice */
@@ -1235,8 +1189,8 @@ footer {
     .purple-white-paper-btn,
     .submit-btn,
     .social-links a {
-        min-height: 44px;
-        min-width: 44px;
+        min-height: 40px;
+        min-width: 40px;
     }
     
     /* Adjust spacing for easier touch */
@@ -1575,7 +1529,7 @@ footer {
                     <!-- Video Section -->
                     <section class="container ">
                         <h2 class="section-title">Check Out This Great Video</h2>
-                        <video style="height: 400px; width: fit-content;" controls autoplay muted loop preload="auto">
+                        <video class="video__" style="height: 400px; width: fit-content;" controls autoplay muted loop preload="auto">
                             <source src="images/video.MP4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
@@ -1640,13 +1594,9 @@ footer {
                                     <h3>xGreen.Energy (XRG)</h3>
                                     <p> Ave of Stars, Tsim Sha Tsui, Hong Kong</p>
                                 </div>
-                                <div class="contact-info">
-                                    <a class="info-a" rel="" role="link" aria-haspopup="false"
-                                        href="mailto:contact@xgreen.energy">
-                                        contact@xgreen.energy</a>
-                                </div>
+                                
                                 <div class="info-card">
-                                    <h3 style="margin-top: 40px;"> Business Hours</h3>
+                                    <h3 style="margin-top: 20px;"> Business Hours</h3>
                                     <table class="hours-table">
                                         <tr>
                                             <td>Mon</td>
@@ -1688,9 +1638,9 @@ footer {
                             <div class="footer-container">
                                 <div class="footer-section">
                                     <div class="telegram-ct">
-                                        <p class="cta-tel">t.me/x_green_energy</p>
+                                        <a class="cta-tel" href="https://t.me/x_green_energy">t.me/x_green_energy</a>
                                         <p class="cta-tel-2">Get 10% Off Your First Contribution to Protecting
-                                            Nature!<br> Invest in
+                                            Nature! Invest in
                                             the future, reduce CO₂, and support green technologies—start today!
                                         </p>
                                     </div>
@@ -1771,34 +1721,7 @@ footer {
                             previewTimeout = null;
                             stopPreview();
                         });
-                        // Video Play Functionality (DEBUG VERSION)
-                        document.getElementById('playVideoBtn').addEventListener('click', function (e) {
-                            e.stopPropagation(); // Prevent event bubbling
-
-                            const placeholder = document.getElementById('videoPlaceholder');
-                            const iframe = document.getElementById('vimeoIframe');
-                            const playBtn = document.getElementById('playVideoBtn');
-
-
-                            if (!iframe || !playBtn) {
-                                console.error('Required elements not found');
-                                return;
-                            }
-
-                            // Hide play button
-                            playBtn.style.display = 'none';
-
-                            // Load the Vimeo iframe with autoplay
-                            const vimeoUrl = "https://player.vimeo.com/video/1073970690?h=012e7050ea&autoplay=1&title=0&byline=0&portrait=0";
-
-                            iframe.src = vimeoUrl;
-
-                            // Show the iframe
-                            iframe.style.display = 'block';
-
-                            // Optional: Focus on iframe for better accessibility
-                            iframe.focus();
-                        });
+                       
                     </script>
 </body>
 
