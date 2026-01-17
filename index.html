@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xGreen.Energy (XRG) - First Tokenized Green Energy Asset on XRP Ledger</title>
+    <link rel="stylesheet" href="/index.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -1358,6 +1359,8 @@ footer {
     }
 
 }
+
+
     </style>
 
 </head>
@@ -1570,16 +1573,12 @@ footer {
 
 
                     <!-- Video Section -->
-                    <section class="container video-section">
+                    <section class="container ">
                         <h2 class="section-title">Check Out This Great Video</h2>
-                        <div class="video-placeholder" id="videoPlaceholder">
-                            <div class="video-play-btn" id="playVideoBtn">
-                                <i class="fas fa-play"></i>
-                            </div>
-                            <iframe id="vimeoIframe" src="" frameborder="0"
-                                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
-                            </iframe>
-                        </div>
+                        <video style="height: 400px; width: fit-content;" controls autoplay muted loop preload="auto">
+                            <source src="images/video.MP4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     </section>
 
                     <!-- Contact Section -->
@@ -1714,7 +1713,7 @@ footer {
                                         <a href="https://www.instagram.com/xgreen.energy"><i
                                                 class="fab fa-instagram"></i></a>
                                         <a href="https://t.me/x_green_energy"><i class="fab fa-telegram"></i></a>
-                                        <a href="https://www.x.com/xgreen_energy"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://www.x.com/xgreen_energy" class="x-icon">𝕏</a>
                                         <a href="https://www.tiktok.com/@xgreen.energy"><i
                                                 class="fab fa-tiktok"></i></a>
                                         <a href="https://www.youtube.com/@xGreen.Energy"><i
@@ -1742,26 +1741,36 @@ footer {
                         </div>
                     </footer>
 
-                    <!-- Video Modal -->
-                    <div class="modal" id="videoModal">
-                        <div class="modal-content">
-                            <button class="close-modal" id="closeModalBtn">&times;</button>
-                            <div style="padding: 20px; text-align: center;">
-                                <h3>Green Energy Revolution</h3>
-                                <p>This would be a video about xGreen.Energy and our mission to tokenize green
-                                    energy assets.</p>
-                                <div
-                                    style="background: #f0f0f0; height: 300px; display: flex; justify-content: center; align-items: center; border-radius: 8px; margin: 20px 0;">
-                                    <i class="fas fa-play-circle" style="font-size: 60px; color: #0d8c4d;"></i>
-                                </div>
-                                <p>Video content would be embedded here to showcase xGreen.Energy's innovative
-                                    approach.</p>
-                            </div>
-                        </div>
-                    </div>
+
 
                     <script>
+                        const video = document.querySelector("video");
 
+                        function startPreview() {
+                            video.muted = true;
+                            video.currentTime = 1;
+                            video.playbackRate = 0.5;
+                            video.play();
+                        }
+
+                        function stopPreview() {
+                            video.currentTime = 0;
+                            video.playbackRate = 1;
+                            video.pause();
+                        }
+
+                        let previewTimeout = null;
+
+                        video.addEventListener("mouseenter", () => {
+                            startPreview();
+                            previewTimeout = setTimeout(stopPreview, 4000);
+                        });
+
+                        video.addEventListener("mouseleave", () => {
+                            clearTimeout(previewTimeout);
+                            previewTimeout = null;
+                            stopPreview();
+                        });
                         // Video Play Functionality (DEBUG VERSION)
                         document.getElementById('playVideoBtn').addEventListener('click', function (e) {
                             e.stopPropagation(); // Prevent event bubbling
