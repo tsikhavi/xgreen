@@ -159,6 +159,30 @@
             /* Purple icon on hover */
         }
 
+
+
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .separator:not(:empty)::before {
+            margin-right: .25em;
+        }
+
+        .separator:not(:empty)::after {
+            margin-left: .25em;
+        }
+
         .hero-image {
             max-height: 96vh;
             max-width: screen;
@@ -1324,17 +1348,21 @@
 
         <div class="container">
 
-            <h1 class="section-title" style="text-align: center; font-size: 40px; margin-top: -44px;">
+            <h1 class="" style="text-align: center; font-size: 40px; margin-top: -44px;">
                 <img style="width: 28px; height: auto;  " src="images/X.png" alt="logox">Green.Energy
                 (XRG) -
                 The first tokenized green energy asset on XRP Ledger
             </h1>
+            <div class="separator"><a class="info-c"
+                    href="https://xpmarket.com/token/XRG-rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp">rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp</a>
+            </div>
 
-            </hr>
             <p class="hero-tagline" style="font-weight: bolder;">We turn energy into value, not by depleting nature, but
                 by restoring its
                 balance.
             </p>
+
+
         </div>
 
         <a href="https://drive.google.com/file/d/1dEYiWMleLVbmF6wfXnthaRJEBZ2NvlkX/view?pli=1" target="_blank"
@@ -1540,8 +1568,8 @@
                     <!-- Video Section -->
 
                     <section class="container " style=" max-height: fit-content;">
-                        <h2 class="section-title">Check Out This Great Video</h2>
-                        <div style="padding:50% 0 0 0;position:relative;">
+                        <h2 class="section-title" style="margin-bottom: -30px;">Check Out This Great Video</h2>
+                        <div style="padding:50% 0; max-height: fit-content;position:relative; margin-top: -40px;">
                             <!---->
                             <iframe
                                 src="https://player.vimeo.com/video/1155425872?h=e0e7c02af1?badge=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
@@ -1552,7 +1580,7 @@
                             </iframe>
                         </div>
                     </section>
-                    
+
 
 
                     <!-- Contact Section -->
