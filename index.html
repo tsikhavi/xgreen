@@ -1323,6 +1323,26 @@
             }
 
         }
+
+        .rounded-box {
+            width: fit-content;
+            height: max-content;
+            padding: 10px;
+            border-radius: 25px;
+            /* Rounds all corners by 25px */
+            border: solid 2px #e2e2e2;;
+            display: block;
+            justify-content: center;
+            margin: 10px auto;            
+        }
+
+        .token-address{
+            color: #e2e2e2;
+        }
+        .token-address:hover{
+            color: #7a4979;
+        }
+
     </style>
 </head>
 
@@ -1353,16 +1373,21 @@
                 (XRG) -
                 The first tokenized green energy asset on XRP Ledger
             </h1>
-            <p style="display: block; justify-content: center; margin-bottom: -8px; color: #a79393;">
-                Token Address: </p>
-            <div class="separator"><a class="info-c"
-                    href="https://xpmarket.com/token/XRG-rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp">rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp</a>
-            </div>
 
+            <div class="rounded-box">
+                <p >
+                    Token Address: </p>
+                    <p><a class="token-address"  href="https://xpmarket.com/token/XRG-rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp">
+                    rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp</a></p>
+                
+            </div>
             <p class="hero-tagline" style="font-weight: bolder;">We turn energy into value, not by depleting nature, but
                 by restoring its
                 balance.
             </p>
+
+
+
 
 
         </div>
