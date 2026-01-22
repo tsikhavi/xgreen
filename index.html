@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xGreen.Energy (XRG) - First Tokenized Green Energy Asset on XRP Ledger</title>
-    <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -23,11 +22,12 @@
             line-height: 1.6;
             font-smooth: antialiased;
             overflow-x: hidden;
+            padding: 0 5px;
         }
 
         .container {
             width: 100%;
-            max-width: screen;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -37,6 +37,7 @@
             justify-content: center;
             align-items: center;
             background-color: #1b1b1b;
+            margin-bottom: -10px;
 
         }
 
@@ -46,22 +47,31 @@
             padding-left: 20px;
         }
 
+        .anchor {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            overflow-x: hidden;
+            gap: 4px;
+            padding-bottom: 20px;
+        }
+
         .hero {
             background-size: cover;
             background-position: center;
             color: rgb(226, 226, 226);
-            ;
-            text-align: center;
-            padding: 10px 20px;
+            padding: 10px;
             margin-bottom: 60px;
             background-color: #1b1b1b;
 
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-size: 36px;
+            margin-top: -44px;
+            word-spacing: normal;
+            white-space: nowrap;
         }
 
         .hero p {
@@ -87,6 +97,7 @@
             margin-top: 20px;
             text-align: center;
             width: 70%;
+            max-width: 1200px;
             justify-content: center;
             margin-left: auto;
             margin-right: auto;
@@ -206,13 +217,11 @@
         /* About Section */
         .section-title {
             text-align: start;
-            margin-bottom: 50px;
             color: rgb(226, 226, 226);
             font-size: 36px;
             position: relative;
-            padding-bottom: 15px;
             max-width: 1200px;
-            margin: auto;
+            margin: 50px auto;
 
         }
 
@@ -243,14 +252,11 @@
 
         .aboutt-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(400px, 1fr));
-            justify-content: center;
-            max-width: 1000px;
+            grid-template-columns: repeat(3, minmax(350px, 1fr));
+            justify-items: center;
             height: max-content;
             gap: 40px;
             margin: auto;
-
-
         }
 
         .about-card {
@@ -287,17 +293,17 @@
         }
 
         .about-text {
-            text-align: center;
             color: #e2e2e2;
             line-height: inherit;
             font-weight: 500;
-            width: 100%;
+            width: 90%;
             margin-top: 30px;
             font-size: medium;
             padding-top: 4px;
 
 
         }
+        
 
         .about-text p {
             font-weight: 500;
@@ -333,8 +339,8 @@
 
         .mission {
             background-color: #000000;
-            padding: 80px 20px;
-            margin: 100px 0;
+            padding: 80px 0;
+            margin: 100px auto;
             text-align: center;
         }
 
@@ -388,16 +394,11 @@
         }
 
 
-        /* Contact Section */
-        .contact {
-            margin: 10px 0;
-        }
-
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
-            max-width: 900px;
+            max-width: 1200px;
 
         }
 
@@ -642,14 +643,23 @@
         }
 
         /* Responsive Styles */
+        @media(min-width: 1200px) {
+
+            .aboutt-grid {
+                margin: auto;
+            }
+        }
+
         @media (max-width: 992px) {
             .hero h1 {
-                font-size: 40px;
+                font-size: 36px;
+                white-space: normal;
             }
 
             .hero p {
                 font-size: 20px;
             }
+
         }
 
         @media (max-width: 768px) {
@@ -657,6 +667,10 @@
             .hero {
                 padding: 80px 20px;
 
+            }
+
+            .token-address {
+                font-size: small;
             }
 
             .imgx {
@@ -690,6 +704,9 @@
         }
 
         @media (max-width: 576px) {
+            .anchor {
+                flex-direction: column;
+            }
 
             .about-grid,
             .features-grid {
@@ -1046,7 +1063,7 @@
 
             /* Contact form */
             .contact-form {
-                padding: 20px;
+                padding: 2px;
 
             }
 
@@ -1330,23 +1347,22 @@
         .rounded-box {
             width: fit-content;
             height: max-content;
-            padding: 10px;
+            padding: 0px 35px;
             border-radius: 25px;
-            /* Rounds all corners by 25px */
-            border: solid 2px #5cd258
-;;
+            border: solid 2px #9ec59c;
             display: block;
             justify-content: center;
-            margin: 10px auto;            
+            margin: 10px auto;
         }
 
-        .token-address{
+        .token-address {
             color: #e2e2e2;
+
         }
-        .token-address:hover{
+
+        .token-address:hover {
             color: #7a4979;
         }
-
     </style>
 </head>
 
@@ -1360,9 +1376,11 @@
                 </a>
             </div>
             <p
-                style="display: inline-flex; justify-content: center; padding-bottom: 30px; font-size: 18px; margin-top: -30px;">
+                style=" justify-content: center; padding-bottom: 40px; 
+                font-size: 24px; ;margin: 0px auto; font-weight: 600;
+                max-width: fit-content; ">
                 <span>
-                    <img style="width: 22px; height: auto;  " src="images/X.png" alt="logox">
+                    <img style="width: 22px; height: auto; margin-right: -8px;  " src="images/X.png" alt="logox">
                 </span>
                 Green.Energy (XRG)
             </p>
@@ -1372,18 +1390,20 @@
 
         <div class="container">
 
-            <h1 class="" style="text-align: center; font-size: 40px; margin-top: -44px;">
-                <img style="width: 28px; height: auto;  " src="images/X.png" alt="logox">Green.Energy
-                (XRG) -
-                The first tokenized green energy asset on XRP Ledger
+            <h1>
+                <img style="width: 28px; height: auto; margin-top: 60px; margin-right: -8px; " src="images/X.png" alt="logox">
+                Green.Energy (XRG) - The first tokenized green energy asset
+                <br>on XRP Ledger (XRPL)
             </h1>
 
             <div class="rounded-box">
-                <p >
+                <p style="margin-bottom: -2px ; margin-top: 8px;">
                     Token Address: </p>
-                    <p><a class="token-address"  href="https://xpmarket.com/token/XRG-rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp">
-                    rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp</a></p>
-                
+                <p><a class="token-address" href="https://xpmarket.com/token/XRG-rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp">
+                        rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp
+                    </a>
+                </p>
+
             </div>
             <p class="hero-tagline" style="font-weight: bolder;">We turn energy into value, not by depleting nature, but
                 by restoring its
@@ -1395,29 +1415,30 @@
 
 
         </div>
-
-        <a href="https://drive.google.com/file/d/1dEYiWMleLVbmF6wfXnthaRJEBZ2NvlkX/view?pli=1" target="_blank"
-            class="purple-white-paper-btn">
-            White Paper (ENG)
-        </a>
-        <a href="https://drive.google.com/file/d/1Fuv5La7ejAaM25v77sPchJIsVi4hHfW2/view?actionitemdetails="
-            target="_blank" class="purple-white-paper-btn">
-            กระดาษสีขาว (ไทย) 
-        </a>
-        <a href="https://drive.google.com/file/d/163yakcpKL1HoMyTTtXY7wmmNY1EEk--e/view?actionitemdetails="
-            target="_blank" class="purple-white-paper-btn">
-            БЕЛАЯ БУМАГА (РУ) 
-        </a>
-        <a href="https://drive.google.com/file/d/1vCZyod_JYK69IeStv_6L0DbSM6yrERPM/view?actionitemdetails="
-            target="_blank" class="purple-white-paper-btn">
-            白皮书 (中文) 
-        </a>
+        <div class="anchor">
+            <a href="https://drive.google.com/file/d/1dEYiWMleLVbmF6wfXnthaRJEBZ2NvlkX/view?pli=1" target="_blank"
+                class="purple-white-paper-btn">
+                White Paper (ENG)
+            </a>
+            <a href="https://drive.google.com/file/d/1vCZyod_JYK69IeStv_6L0DbSM6yrERPM/view?actionitemdetails="
+                target="_blank" class="purple-white-paper-btn">
+                白皮书 (中文)
+            </a>
+            <a href="https://drive.google.com/file/d/1Fuv5La7ejAaM25v77sPchJIsVi4hHfW2/view?actionitemdetails="
+                target="_blank" class="purple-white-paper-btn">
+                กระดาษสีขาว (ไทย)
+            </a>
+            <a href="https://drive.google.com/file/d/163yakcpKL1HoMyTTtXY7wmmNY1EEk--e/view?actionitemdetails="
+                target="_blank" class="purple-white-paper-btn">
+                БЕЛАЯ БУМАГА (РУ)
+            </a>
+        </div>
 
     </section>
     <div class="hero-image-container">
         <img class="hero-image" src="images/image1.jfif">
     </div>
-    <section class="container " style=" max-height: fit-content; margin-top: 60px;">
+    <section class="container " style=" max-height: fit-content; margin-top: 60px; max-width: 1200px;">
         <div style="padding:125% 0 0 0;position:relative;">
             <iframe
                 src="https://player.vimeo.com/video/1155424638?badge=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
@@ -1448,7 +1469,7 @@
             Find out more
         </a>
     </div> <!-- Features Section -->
-    <section class="container" style="padding-left: 40px;" id="about">
+    <section class="container" id="about">
         <div class="about-grid">
             <!-- Wind Energy Card -->
             <div class="about-card">
@@ -1491,61 +1512,62 @@
                     <img class="card-img" src="images/download6.webp">
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" style="background-color: black; " id="mission">
-        <div class="container" style="padding-left: 40px;">
-            <h2 class="section-title" style="padding-top: 20px;">About us</h2>
 
-            <section class="aboutt-grid" style=" margin: auto;">
-                <div class="about-text">
+    <section class=" container" id="mission">
+        <h2 class="section-title">About us</h2>
 
-                    <img class="card-about-img" src="images/wind.webp" alt="">
-                    <h3>Wind Energy</h3>
-                    <p> Wind turbines on land and water with solar panels on masts for maximum efficiency.</p>
-                </div>
+        <section class="aboutt-grid">
+            <div class="about-text">
 
-                <div class="about-text">
-
-                    <img class="card-about-img" src="images/solar.webp" alt="">
-                    <h3>Solar Energy</h3>
-                    <p> Panels on water, land, and structures. Mirrors and lenses system for catching and focusing
-                        light.</p>
-                </div>
-
-                <div class="about-text">
-
-                    <img class="card-about-img" src="images/ripple.webp" alt="">
-                    <h3>Ripple Energy</h3>
-                    <p> Hydroturbines, tides, currents converting water movement into electricity.</p>
-                </div>
-
-            </section>
-            <section class="aboutt-grid">
-                <div class="about-text">
-                    <img class="card-about-img" src="images/biofuel.webp" alt="">
-                    <h3>Biofuel Production</h3>
-                    <p> Cannabis and algae for eco-friendly fuel, transport, and export.</p>
-                </div>
-
-                <div class="about-text">
-
-                    <img class="card-about-img" src="images/geothermal.webp" alt="">
-                    <h3>Geothermal Energy</h3>
-                    <p> Earth’s heat for power generation, heating, and heat pumps.</p>
-                </div>
-
-                <div class="about-text">
-
-                    <img class="card-about-img" src="images/green-clean-mining.webp" alt="">
-                    <h3>Green clean mining</h3>
-                    <p> Green energy + liquid immersion cooling = eco-friendly mining with zero carbon footprint.
-                    </p>
-                </div>
+                <img class="card-about-img" src="images/wind.webp" alt="">
+                <h3>Wind Energy</h3>
+                <p> Wind turbines on land and water with solar panels on masts for maximum efficiency.</p>
+            </div>
 
 
-            </section>
+
+            <div class="about-text">
+
+                <img class="card-about-img" src="images/solar.webp" alt="">
+                <h3>Solar Energy</h3>
+                <p> Panels on water, land, and structures. Mirrors and lenses system for catching and focusing
+                    light.</p>
+            </div>
+
+            <div class="about-text">
+
+                <img class="card-about-img" src="images/ripple.webp" alt="">
+                <h3>Ripple Energy</h3>
+                <p> Hydroturbines, tides, currents converting water movement into electricity.</p>
+            </div>
+
+            <div class="about-text">
+                <img class="card-about-img" src="images/biofuel.webp" alt="">
+                <h3>Biofuel Production</h3>
+                <p> Cannabis and algae for eco-friendly fuel, transport, and export.</p>
+            </div>
+
+            <div class="about-text">
+
+                <img class="card-about-img" src="images/geothermal.webp" alt="">
+                <h3>Geothermal Energy</h3>
+                <p> Earth’s heat for power generation, heating, and heat pumps.</p>
+            </div>
+
+            <div class="about-text">
+
+                <img class="card-about-img" src="images/green-clean-mining.webp" alt="">
+                <h3>Green clean mining</h3>
+                <p> Green energy + liquid immersion cooling = eco-friendly mining with zero carbon footprint.
+                </p>
+            </div>
+
+        </section>
+
     </section>
     <!--Mission Section-->
     <section class="mission" style="background-color: black; margin-top: -20px; " id="mission">
@@ -1587,194 +1609,169 @@
 
                 </div>
             </section>
-            <section>
-
-
-                <div class="">
 
 
 
+        </div>
+    </section>
 
+    <section class="container " style=" max-height: fit-content; ">
+        <h2 class="section-title">Check Out This Great Video</h2>
+        <div style="padding:50% 0; max-height: fit-content;position:relative; margin-top: 0px;">
+            <!---->
+            <iframe
+                src="https://player.vimeo.com/video/1155425872?h=e0e7c02af1?badge=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" title="IMG_8223">
+            </iframe>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="container" id="contact">
+        <h2 class="section-title">Contact Us</h2>
 
-                    <!-- Video Section -->
+        <div class="contact-container ">
+            <!-- Contact Form -->
+            <div class="contact-form " style="  max-width: 320px;">
+                <h3 style=" font-size: 24px; text-align: start;">Drop us a line!
+                </h3>
+                <form id="contactForm" style="  width:100%;">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
 
-                    <section class="container " style=" max-height: fit-content;">
-                        <h2 class="section-title" style="margin-bottom: -30px;">Check Out This Great Video</h2>
-                        <div style="padding:50% 0; max-height: fit-content;position:relative; margin-top: -40px;">
-                            <!---->
-                            <iframe
-                                src="https://player.vimeo.com/video/1155425872?h=e0e7c02af1?badge=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                                frameborder="0"
-                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;" title="IMG_8223">
-                            </iframe>
+                    <div class="form-group ">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group "
+                        style="display: inline-flex; justify-content: space-between; width: 100%; ">
+                        <label class="info-a"><i class="fa-solid fa-paperclip "></i>Attach
+                            Files</label>
+
+                        <input type="file" id="fileInput" style="display: none;">
+                        <p>Attachments (0)</p>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="g-recaptcha" data-sitekey="6LfL6cApAAAAAKGQZcBqnyw2qg">
                         </div>
-                    </section>
+                    </div>
+
+                    <button type="submit" class="purple-white-paper-btn" style="width: 100%; margin-top: -20px;">Send
+                        Message</button>
+                </form>
+                <p style="font-size: small; padding-top: 8px;">This site is protected by
+                    reCAPTCHA and the Google <a class="info-b" href="https://policies.google.com/privacy">Policy</a> and
+                    <a class="info-b" href="https://policies.google.com/terms">Terms of
+                        Service</a> apply.
+                </p>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <div class="info-card">
+                    <h3>Better yet, see us in person! </h3>
+                    <p>We love our customers, so feel free to visit
+                        during working hours.</p>
+                    <br>
+                    <h3><img style="width: 16px; height: 18px;" src="images/X1.svg" alt="logox">Green.Energy (XRG)</h3>
+                    <p> Ave of Stars, Tsim Sha Tsui, Hong Kong</p>
+                </div>
+                <div class="contact-mailto">
+                    <a class="info-c" rel="" role="link" aria-haspopup="false" href="mailto:contact@xgreen.energy">
+                        contact@xgreen.energy</a>
+                </div>
+                <div class="info-card">
+                    <h3 style="margin-top: 40px;"> Business Hours</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <td>Mon</td>
+                            <td>05:00 am – 08:00 am</td>
+                        </tr>
+                        <tr>
+                            <td>Tue</td>
+                            <td>05:00 am – 08:00 am</td>
+                        </tr>
+                        <tr>
+                            <td>Wed</td>
+                            <td>05:00 am – 08:00 am</td>
+                        </tr>
+                        <tr>
+                            <td>Thu</td>
+                            <td>By Appointment</td>
+                        </tr>
+                        <tr>
+                            <td>Fri</td>
+                            <td>05:00 am – 08:00 am</td>
+                        </tr>
+                        <tr>
+                            <td>Sat</td>
+                            <td>05:00 am – 08:00 am</td>
+                        </tr>
+                        <tr>
+                            <td>Sun</td>
+                            <td>05:00 am – 09:00 am</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container" style="margin:auto; display: flex; flex-direction: column; justify-content: center;">
+            <a href="https://t.me/x_green_energy" class="cta-tel">t.me/x_green_energy</a>
+            <p class="cta-tel-2">Get 10% Off Your First Contribution to Protecting
+                Nature! Invest in the future, reduce CO₂, and support green
+                technologies—start today!
+            </p>
 
 
 
-                    <!-- Contact Section -->
-                    <section class="container contact" id="contact">
-                        <h2 class="section-title">Contact Us</h2>
+            <div class="form-group inline-signup-form">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <button type="submit" class="purple-white-paper-btn ">Sign up</button>
+            </div>
 
-                        <div class="contact-container">
-                            <!-- Contact Form -->
-                            <div class="contact-form " style="  max-width: 320px;">
-                                <h3 style=" font-size: 24px; text-align: start;">Drop us a line!
-                                </h3>
-                                <form id="contactForm" style="  width:100%;">
-                                    <div class="form-group">
-                                        <input type="text" id="name" name="name" placeholder="Name" required>
-                                    </div>
-
-                                    <div class="form-group ">
-                                        <input type="email" id="email" name="email" placeholder="Email" required>
-
-                                    </div>
-
-                                    <div class="form-group">
-                                        <textarea id="message" name="message" placeholder="Message" rows="5"
-                                            required></textarea>
-                                    </div>
-
-                                    <div class="form-group "
-                                        style="display: inline-flex; justify-content: space-between; width: 100%; ">
-                                        <label class="info-a"><i class="fa-solid fa-paperclip "></i>Attach
-                                            Files</label>
-
-                                        <input type="file" id="fileInput" style="display: none;">
-                                        <p>Attachments (0)</p>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="g-recaptcha" data-sitekey="6LfL6cApAAAAAKGQZcBqnyw2qg">
-                                        </div>
-                                    </div>
-
-                                    <button type="submit" class="purple-white-paper-btn"
-                                        style="width: 100%; margin-top: -20px;">Send Message</button>
-                                </form>
-                                <p style="font-size: small; padding-top: 8px;">This site is protected by
-                                    reCAPTCHA and the Google <a class="info-b"
-                                        href="https://policies.google.com/privacy">Policy</a> and
-                                    <a class="info-b" href="https://policies.google.com/terms">Terms of
-                                        Service</a> apply.
-                                </p>
-                            </div>
-
-                            <!-- Contact Info -->
-                            <div>
-                                <div class="info-card">
-                                    <h3>Better yet, see us in person! </h3>
-                                    <p>We love our customers, so feel free to visit
-                                        during working hours.</p>
-                                    <br>
-                                    <h3><img style="width: 16px; height: 18px;" src="images/X1.svg"
-                                            alt="logox">Green.Energy (XRG)</h3>
-                                    <p> Ave of Stars, Tsim Sha Tsui, Hong Kong</p>
-                                </div>
-                                <div class="contact-mailto">
-                                    <a class="info-c" rel="" role="link" aria-haspopup="false"
-                                        href="mailto:contact@xgreen.energy">
-                                        contact@xgreen.energy</a>
-                                </div>
-                                <div class="info-card">
-                                    <h3 style="margin-top: 40px;"> Business Hours</h3>
-                                    <table class="hours-table">
-                                        <tr>
-                                            <td>Mon</td>
-                                            <td>05:00 am – 08:00 am</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tue</td>
-                                            <td>05:00 am – 08:00 am</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Wed</td>
-                                            <td>05:00 am – 08:00 am</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Thu</td>
-                                            <td>By Appointment</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Fri</td>
-                                            <td>05:00 am – 08:00 am</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sat</td>
-                                            <td>05:00 am – 08:00 am</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sun</td>
-                                            <td>05:00 am – 09:00 am</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Footer -->
-                    <footer class="footer">
-                        <div class="container">
-                            <div class="footer-container">
-                                <div class="footer-section">
-                                    <div class="telegram-ct">
-                                        <a href="https://t.me/x_green_energy" class="cta-tel">t.me/x_green_energy</a>
-                                        <p class="cta-tel-2">Get 10% Off Your First Contribution to Protecting
-                                            Nature! Invest in the future, reduce CO₂, and support green
-                                            technologies—start today!
-                                        </p>
-                                    </div>
+            <div class="social-links">
+                <a href="https://discord.com/users/1319212969455910954"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/xgreen.energy"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/x_green_energy"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.x.com/xgreen_energy" class="x-icon">𝕏</a>
+                <a href="https://www.tiktok.com/@xgreen.energy"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@xGreen.Energy"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
 
 
 
-                                    <div class="form-group inline-signup-form">
-                                        <input type="email" id="email" name="email" placeholder="Email" required>
-                                        <button type="submit" class="purple-white-paper-btn ">Sign up</button>
-                                    </div>
-                                </div>
 
+        </div>
 
+        <div class="copyright">
+            <p> Copyright &copy; 2025 xGreen.Energy (XRG) - All Rights Reserved.
 
-                                <div class="footer-section">
+            </p>
+            <p>
+                <a href="/" class="info-b">Privacy
+                    Policy</a> |
+                <a href="/" class="info-b">Terms of
+                    Service</a>
 
-                                    <div class="social-links">
-                                        <a href="https://discord.com/users/1319212969455910954"><i
-                                                class="fab fa-discord"></i></a>
-                                        <a href="https://www.instagram.com/xgreen.energy"><i
-                                                class="fab fa-instagram"></i></a>
-                                        <a href="https://t.me/x_green_energy"><i class="fab fa-telegram"></i></a>
-                                        <a href="https://www.x.com/xgreen_energy" class="x-icon">𝕏</a>
-                                        <a href="https://www.tiktok.com/@xgreen.energy"><i
-                                                class="fab fa-tiktok"></i></a>
-                                        <a href="https://www.youtube.com/@xGreen.Energy"><i
-                                                class="fab fa-youtube"></i></a>
-                                    </div>
-
-                                    <!--<div class="cookie-notice">
-                        <p>This website uses cookies. We use cookies to analyze website traffic and optimize your website experience. By accepting our use of cookies, your data will be aggregated with all other user data.</p>
-                    </div>-->
-                                </div>
-                            </div>
-
-                            <div class="copyright">
-                                <p> Copyright &copy; 2025 xGreen.Energy (XRG) - All Rights Reserved.
-
-                                </p>
-                                <p>
-                                    <a href="/" class="info-b">Privacy
-                                        Policy</a> |
-                                    <a href="/" class="info-b">Terms of
-                                        Service</a>
-
-                                </p>
-                            </div>
-                        </div>
-                    </footer>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
+            </p>
+        </div>
+        </div>
+    </footer>
+    <script src="https://player.vimeo.com/api/player.js"></script>
 
 </body>
 
