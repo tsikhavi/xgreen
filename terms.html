@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Use | xGreen.Energy & CO2.Support</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
         /* CSS Styles in Header */
         * {
@@ -15,8 +18,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            color: rgb(226, 226, 226);
+            background-color: black;
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
@@ -28,7 +31,7 @@
             padding: 2rem;
             border-radius: 10px;
             margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
         .logo-container {
@@ -62,7 +65,7 @@
         }
         
         .last-updated {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(0, 0, 0, 0.3);
             padding: 0.8rem;
             border-radius: 5px;
             margin-top: 1rem;
@@ -83,17 +86,17 @@
         }
         
         main {
-            background-color: white;
+            background-color: #111;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
         }
         
         aside {
-            background-color: white;
+            background-color: #111;
             padding: 1.5rem;
             border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
             height: fit-content;
             position: sticky;
             top: 20px;
@@ -103,8 +106,9 @@
             color: #0a8f3e;
             margin: 1.8rem 0 1rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e9ecef;
+            border-bottom: 2px solid #222;
             font-weight: 600;
+            scroll-margin-top: 20px;
         }
         
         h2:first-of-type {
@@ -112,9 +116,10 @@
         }
         
         h3 {
-            color: #333;
+            color: rgb(226, 226, 226);
             margin: 1.5rem 0 0.8rem;
             font-weight: 600;
+            scroll-margin-top: 20px;
         }
         
         p {
@@ -123,7 +128,7 @@
         }
         
         .disclaimer {
-            background-color: #fff8e1;
+            background-color: #1a1a00;
             border-left: 4px solid #ffc107;
             padding: 1.5rem;
             margin: 1.5rem 0;
@@ -131,12 +136,12 @@
         }
         
         .disclaimer h3 {
-            color: #b38b00;
+            color: #ffc107;
             margin-top: 0;
         }
         
         .important-notice {
-            background-color: #ffeaea;
+            background-color: #1a0000;
             border-left: 4px solid #dc3545;
             padding: 1.5rem;
             margin: 1.5rem 0;
@@ -144,18 +149,19 @@
         }
         
         .important-notice h3 {
-            color: #a71d2a;
+            color: #ff6b6b;
             margin-top: 0;
         }
         
         .caps-text {
             font-size: 0.95rem;
             line-height: 1.5;
-            background-color: #f8f9fa;
+            background-color: #1a1a1a;
             padding: 1.5rem;
             border-radius: 5px;
             margin: 1.5rem 0;
-            border: 1px solid #e9ecef;
+            border: 1px solid #333;
+            color: rgb(226, 226, 226);
         }
         
         .content-list {
@@ -165,7 +171,8 @@
         
         .content-list li {
             padding: 0.8rem 0;
-            border-bottom: 1px solid #e9ecef;
+            border-bottom: 1px solid #333;
+            color: rgb(226, 226, 226);
         }
         
         .content-list li:last-child {
@@ -182,10 +189,11 @@
         }
         
         .contact-box {
-            background-color: #e8f5e9;
+            background-color: #0a1f0a;
             padding: 1.5rem;
             border-radius: 8px;
             margin-top: 2rem;
+            border: 1px solid #0a8f3e;
         }
         
         .contact-box h3 {
@@ -207,27 +215,29 @@
             border-radius: 5px;
             text-decoration: none;
             display: inline-block;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.2s;
         }
         
         .website-link:hover {
             background-color: #067733;
+            transform: translateY(-2px);
         }
         
         footer {
             text-align: center;
             margin-top: 3rem;
             padding-top: 2rem;
-            border-top: 1px solid #dee2e6;
-            color: #666;
+            border-top: 1px solid #333;
+            color: #888;
             font-size: 0.9rem;
         }
         
         .highlight {
-            background-color: rgba(10, 143, 62, 0.1);
+            background-color: rgba(10, 143, 62, 0.2);
             padding: 2px 5px;
             border-radius: 3px;
             font-weight: 500;
+            color: #4cd964;
         }
         
         .terms-nav h3 {
@@ -245,28 +255,32 @@
         }
         
         .terms-nav a {
-            color: #333;
+            color: rgb(226, 226, 226);
             text-decoration: none;
             display: block;
             padding: 0.5rem;
             border-radius: 5px;
             transition: all 0.3s;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
         }
         
         .terms-nav a:hover {
-            background-color: #e8f5e9;
-            color: #0a8f3e;
+            background-color: #0a8f3e;
+            color: white;
+            border-color: #0a8f3e;
         }
         
         .terms-nav .active {
             background-color: #0a8f3e;
             color: white;
+            border-color: #0a8f3e;
         }
         
         .legal-entity {
             margin-top: 1.5rem;
             padding-top: 1.5rem;
-            border-top: 1px dashed #dee2e6;
+            border-top: 1px dashed #333;
         }
         
         @media (max-width: 600px) {
@@ -291,7 +305,9 @@
 <body>
     <header>
         <div class="logo-container">
-            <div class="logo">XG</div>
+            <div class="logo"><a class="logo" href="/">
+                    <img style="width: 100px;" src="images/XRG.svg" alt="logo">
+                </a></div>
             <div>
                 <h1>Terms of Use</h1>
                 <p class="subtitle">xGreen.Energy (XRG) & CO2.Support (CO2)</p>
@@ -303,8 +319,8 @@
     
     <div class="content-container">
         <main>
-            <h2>Introduction</h2>
-            <p>The websites located at <span class="highlight">https://xGreen.Energy</span> and <span class="highlight">https://CO2.Support</span> (the "Website") are the intellectual property of xGreen.Energy (XRG) (hereinafter referred to as "we", "our" or "us"). These Terms of Use include the Privacy Policy, as well as any other applicable rules, policies, schedules and other documents posted from time to time (collectively, the "Terms of Use" or "Agreement").</p>
+            <h2 id="introduction">Introduction</h2>
+            <p>The websites located at <span ><a class="highlight" href="https://xGreen.Energy">https://xGreen.Energy</a></span> and <span ><a href="https://CO2.Support" class="highlight">https://CO2.Support</a></span> (the "Website") are the intellectual property of xGreen.Energy (XRG) (hereinafter referred to as "we", "our" or "us"). These Terms of Use include the Privacy Policy, as well as any other applicable rules, policies, schedules and other documents posted from time to time (collectively, the "Terms of Use" or "Agreement").</p>
             
             <p>Our Websites, together with any content, functionality and services offered on or through the Websites, and all existing or updated or new content, features, social media, are collectively referred to as the "Services". These Terms of Use set forth the terms under which you may access and use the Services provided by us. Please read these Terms of Use carefully before accessing the Websites and/or Services. The Terms of Use supersede all prior or contemporaneous agreements, representations, warranties and/or understandings regarding your use of the Services. <strong>If you do not agree to these Terms of Use in full, you must not use the Websites or any Services in any form.</strong></p>
             
@@ -312,7 +328,7 @@
                 THIS AGREEMENT CONTAINS WARRANTIES, LIMITATIONS OF LIABILITY, DISCLAIMER OF LIABILITY, DISCLAIMER OF GROUP CLAIMS, AND A BILL TO DISSOLVE ALL ARBITRATION DISPUTES AGAINST xGreen.Energy (XRG), its affiliates, managers, participants, service providers, partners, consultants and suppliers (collectively, the "Covered Parties") who are the direct beneficiaries of this ARBITRATION PROVISION.
             </div>
             
-            <h2>Your Agreement</h2>
+            <h2 id="agreement">Your Agreement</h2>
             <p>You fully agree to these Terms of Use if:</p>
             <ul class="content-list">
                 <li>Access or use the Websites;</li>
@@ -322,16 +338,16 @@
                 <li>Use the registration forms, contact forms and contact information featured on the Websites.</li>
             </ul>
             
-            <div class="important-notice">
+            <div class="important-notice" id="regulatory">
                 <h3>Important Regulatory Notice</h3>
                 <p>NO GOVERNMENTAL BODY HAS ENDORSED OR RECOMMENDED XRG AND CO2, THE SERVICES OR ACQUISITION OF XRG AND CO2. XRG AND CO2 ARE NOT POLITICALLY ORIENTED AND ARE NOT AFFILIATED WITH POLITICAL CAMPAIGNS OR GOVERNMENTAL BODIES. XRG AND CO2 IS NOT INTENDED FOR DISTRIBUTION IN JURISDICTIONS WHERE IT IS PROHIBITED BY LAW.</p>
                 <p>You are responsible for complying with the laws of your jurisdiction when purchasing, trading or selling XRG and CO2.</p>
             </div>
             
-            <h2>Requirements</h2>
+            <h2 id="requirements">Requirements</h2>
             <p>The Services are available only to persons capable of entering into legally binding contracts under applicable law, over the age of 18 (or the age of majority in the applicable jurisdiction).</p>
             
-            <h3>Prohibited Users</h3>
+            <h3 id="prohibited">Prohibited Users</h3>
             <p>The Services are not available to persons, organizations or residents of countries or territories under economic sanctions imposed by the United States, United Nations, European Union or other organizations, including but not limited to:</p>
             <ul class="content-list">
                 <li>Cuba</li>
@@ -344,21 +360,21 @@
             </ul>
             <p>You may not access the Services from Jail-Break devices or rooted Android devices.</p>
             
-            <h2>Changes</h2>
+            <h2 id="changes">Changes</h2>
             <p>We reserve the right to change the Terms and Services without notice. By continuing to use the Services, you agree to be bound by the updated Terms.</p>
             
-            <h2>Registration</h2>
+            <h2 id="registration">Registration</h2>
             <p>We reserve the right to deny access to the Services to any person in our sole discretion.</p>
             
-            <h2>Wallet, Cryptocurrency and Technical Requirements</h2>
+            <h2 id="wallet">Wallet, Cryptocurrency and Technical Requirements</h2>
             <p>You are responsible for providing the technical requirements, a suitable cryptocurrency wallet and the necessary cryptocurrencies.</p>
             
-            <div class="disclaimer">
+            <div class="disclaimer" id="disclaimer">
                 <h3>Disclaimer of Warranties and Limitation of Liability</h3>
                 <p>We make no warranties and shall not be liable for any loss or damage arising from the use of the Services and XRG and CO2.</p>
             </div>
             
-            <div class="contact-box">
+            <div class="contact-box" id="contact">
                 <h3>Contact Us</h3>
                 <p>If you have any questions about the Terms of Use or the operation of the websites, please contact us at <span class="highlight">contact@xgreen.energy</span>.</p>
                 
@@ -412,7 +428,7 @@
     </footer>
 
     <script>
-        // Simple navigation highlighting script
+        // Navigation script
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.terms-nav a');
             
@@ -429,10 +445,15 @@
                     // Get the target section id from href attribute
                     const targetId = this.getAttribute('href').substring(1);
                     
-                    // In a real implementation, this would scroll to the section
-                    // For this demo, we'll just show an alert
-                    if(targetId && targetId !== '#') {
-                        alert(`In a fully implemented page, this would scroll to the "${targetId}" section.`);
+                    // Find the target element
+                    const targetElement = document.getElementById(targetId);
+                    
+                    // Scroll to the target element
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
                     }
                 });
             });
@@ -443,6 +464,43 @@
                 link.setAttribute('target', '_blank');
                 link.setAttribute('rel', 'noopener noreferrer');
             });
+            
+            // Update active nav link on scroll
+            function updateActiveNavLink() {
+                const sections = document.querySelectorAll('h2[id], h3[id], div[id]');
+                const navLinks = document.querySelectorAll('.terms-nav a');
+                
+                let currentSectionId = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        currentSectionId = section.id;
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Throttle scroll event for better performance
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                if (!scrollTimeout) {
+                    scrollTimeout = setTimeout(function() {
+                        scrollTimeout = null;
+                        updateActiveNavLink();
+                    }, 100);
+                }
+            });
+            
+            // Initialize active link
+            updateActiveNavLink();
         });
     </script>
 </body>
