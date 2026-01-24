@@ -15,9 +15,12 @@
             box-sizing: border-box;
             font-family: 'Open Sans', Arial, Helvetica, sans-serif;
         }
+        .backgroundimg{
+            background-image: linear-gradient(to bottom,#071733, #010617,black, black);
+        }
 
         body {
-            background-color: black;
+            background-color: #000;
             color: rgb(226, 226, 226);
             line-height: 1.6;
             font-smooth: antialiased;
@@ -36,7 +39,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: black;
             margin-bottom: -10px;
 
         }
@@ -103,7 +105,7 @@
             margin-right: auto;
         }
 
-        .button-width{
+        .button-width {
             width: 200px;
         }
 
@@ -307,7 +309,7 @@
             place-items: center;
 
         }
-        
+
 
         .about-text p {
             font-weight: 500;
@@ -342,7 +344,6 @@
         }
 
         .mission {
-            background-color: #000000;
             padding: 80px 0;
             margin: 100px auto;
             text-align: center;
@@ -447,7 +448,6 @@
 
         .file-upload {
             padding: 10px;
-            background-color: #000000;
             border: 2px dashed #ddd;
             border-radius: 5px;
             text-align: center;
@@ -829,10 +829,11 @@
 
         @media (max-width: 768px) {
 
-            .button-width{
-            width: 100%;
-            font-size:x-small;
-        }
+            .button-width {
+                width: 100%;
+                font-size: x-small;
+            }
+
             /* Mobile landscape & small tablets */
             .logo {
                 min-width: 200px;
@@ -1360,7 +1361,7 @@
             border: solid 2px #9ec59c;
             display: block;
             justify-content: center;
-            margin: 40px auto;
+            margin: -20px auto 40px auto;
         }
 
         .token-address {
@@ -1375,22 +1376,20 @@
     </style>
 </head>
 
-<body>
+<body >
     <!-- Header -->
-    <section class="hero" id="home">
+    <section class="hero backgroundimg" id="home" >
         <header>
-            <div class="logo-container">
+            <div class="logo-container" >
                 <a class="logo" href="/">
                     <img style="width: 250px;" src="images/logo.gif" alt="logo">
                 </a>
             </div>
-            <p
-                style=" justify-content: center; padding-bottom: 40px; 
+            <p style=" justify-content: center; padding-bottom: 40px; 
                 font-size: 24px; ;margin: 0px auto; font-weight: 600;
                 max-width: fit-content; ">
                 <span>
-                    <img style="width: 20px; height: auto; margin-right: -8px;  " 
-                    src="images/X.svg" alt="logox">
+                    <img style="width: 14px; height: auto; margin-right: -8px;  " src="images/X.svg" alt="logox">
                 </span>
                 Green.Energy (XRG)
             </p>
@@ -1399,7 +1398,7 @@
         <!-- Hero Section -->
 
         <div class="container">
-<div class="rounded-box">
+            <div class="rounded-box">
                 <p style="display: flex; justify-content: center; margin-bottom: -5px;">
                     Token Address: </p>
                 <p><a class="token-address" href="https://xpmarket.com/token/XRG-rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp">
@@ -1409,12 +1408,13 @@
 
             </div>
             <h1>
-                <img style="width: 28px; height: auto; margin-top: 60px; margin-right: -10px; " src="images/X.svg" alt="logox">
+                <img style="width: 24px; height: auto; margin-top: 60px; margin-right: -10px; " src="images/X.svg"
+                    alt="logox">
                 Green.Energy (XRG) - The first tokenized green energy asset
                 <br>on XRP Ledger (XRPL)
             </h1>
 
-            
+
             <p class="hero-tagline" style="font-weight: bolder;">We turn energy into value, not by depleting nature, but
                 by restoring its
                 balance.
@@ -1427,15 +1427,15 @@
         </div>
         <div class="anchor">
             <a href="https://drive.google.com/file/d/1dEYiWMleLVbmF6wfXnthaRJEBZ2NvlkX/view?pli=1" target="_blank"
-                class="purple-white-paper-btn button-width" >
+                class="purple-white-paper-btn button-width">
                 White Paper (ENG)
             </a>
             <a href="https://drive.google.com/file/d/1vCZyod_JYK69IeStv_6L0DbSM6yrERPM/view?actionitemdetails="
-                target="_blank" class="purple-white-paper-btn button-width"  >
+                target="_blank" class="purple-white-paper-btn button-width">
                 白皮书 (中文)
             </a>
             <a href="https://drive.google.com/file/d/1Fuv5La7ejAaM25v77sPchJIsVi4hHfW2/view?actionitemdetails="
-                target="_blank" class="purple-white-paper-btn button-width" >
+                target="_blank" class="purple-white-paper-btn button-width">
                 กระดาษสีขาว (ไทย)
             </a>
             <a href="https://drive.google.com/file/d/163yakcpKL1HoMyTTtXY7wmmNY1EEk--e/view?actionitemdetails="
@@ -1459,7 +1459,7 @@
             </iframe>
         </div>
     </section>
-    <div style="background-color: #000000; margin-top: 30px; padding: 30px;">
+    <div style=" margin-top: 30px; padding: 30px;">
         <h2 style="text-align: center; ">
             XRG (green energy key)
         </h2>
@@ -1467,8 +1467,8 @@
 
 
             <p class="hero-tag" style="line-height: 160%;">
-                <img class="imgx" style="width: 18px; height: 18px; margin-right: -6px; margin-bottom: -2px;" src="images/X.svg"
-                    alt="logox">
+                <img class="imgx" style="width: 14px; height: auto; margin-right: -6px; margin-bottom: 0;"
+                    src="images/X.svg" alt="logox">
                 Green.Energy (XRG) is the new reality of a self-sustaining energy economy, where green
                 energy is a fundamental asset, tokenized into XRG and implemented on the XRP Ledger (XRPL)
                 in compliance with the ISO 20022 standard.
@@ -1530,7 +1530,7 @@
     <section class=" container" id="mission">
         <h2 class="section-title">About us</h2>
 
-        <section class="aboutt-grid" >
+        <section class="aboutt-grid">
             <div class="about-text">
 
                 <img class="card-about-img" style="display: flex; place-content: center;" src="images/wind.webp" alt="">
@@ -1542,7 +1542,8 @@
 
             <div class="about-text">
 
-                <img class="card-about-img" src="images/solar.webp" style="display: flex; place-content: center;" alt="">
+                <img class="card-about-img" src="images/solar.webp" style="display: flex; place-content: center;"
+                    alt="">
                 <h3>Solar Energy</h3>
                 <p> Panels on water, land, and structures. Mirrors and lenses system for catching and focusing
                     light.</p>
@@ -1550,27 +1551,31 @@
 
             <div class="about-text">
 
-                <img class="card-about-img" src="images/ripple.webp" style="display: flex; place-content: center;" alt="">
+                <img class="card-about-img" src="images/ripple.webp" style="display: flex; place-content: center;"
+                    alt="">
                 <h3>Ripple Energy</h3>
                 <p> Hydroturbines, tides, currents converting water movement into electricity.</p>
             </div>
 
             <div class="about-text">
-                <img class="card-about-img" src="images/biofuel.webp" style="display: flex; place-content: center;" alt="">
+                <img class="card-about-img" src="images/biofuel.webp" style="display: flex; place-content: center;"
+                    alt="">
                 <h3>Biofuel Production</h3>
                 <p> Cannabis and algae for eco-friendly fuel, transport, and export.</p>
             </div>
 
             <div class="about-text">
 
-                <img class="card-about-img" src="images/geothermal.webp" style="display: flex; place-content: center;" alt="">
+                <img class="card-about-img" src="images/geothermal.webp" style="display: flex; place-content: center;"
+                    alt="">
                 <h3>Geothermal Energy</h3>
                 <p> Earth’s heat for power generation, heating, and heat pumps.</p>
             </div>
 
             <div class="about-text">
 
-                <img class="card-about-img" src="images/green-clean-mining.webp" style="display: flex; place-content: center;" alt="">
+                <img class="card-about-img" src="images/green-clean-mining.webp"
+                    style="display: flex; place-content: center;" alt="">
                 <h3>Green clean mining</h3>
                 <p> Green energy + liquid immersion cooling = eco-friendly mining with zero carbon footprint.
                 </p>
@@ -1580,7 +1585,7 @@
 
     </section>
     <!--Mission Section-->
-    <section class="mission" style="background-color: black; margin-top: -20px; " id="mission">
+    <section class="mission" style=" margin-top: -20px; " id="mission">
         <div class="container">
             <h2 class="section-title" style="color: #e2e2e2;">Mission</h2>
 
@@ -1589,7 +1594,10 @@
 
 
 
-                    <p>Contribute to Nature – Reduce <span style="color: rgba(10, 143, 62, 0.9);">CO₂</span> Emissions!<br>
+                    <p>Contribute to Nature – Reduce <a class ="" href="https://co2.support/" style="color: rgba(10, 143, 62, 0.9);">
+                        <img style="width: 10px; height: auto;" src="images/CO2.svg"
+                    alt="logoCO2"></a>
+                        Emissions!<br>
                         Be part of a sustainable future: lower your carbon footprint, invest in carbon credits,
                         and
                         support green technologies. Together, we can protect nature and build a greener planet!.
@@ -1612,7 +1620,11 @@
 
 
                     <p>This is our shared mission!<br>
-                        Protecting nature and reducing <span style="color: rgba(10, 143, 62, 0.9);">CO₂</span> emissions is everyone’s responsibility. The future of
+                        Protecting nature and reducing 
+                        <a class ="" href="https://co2.support/" >
+                            <img style="width: 10px; height: auto;" src="images/CO2.svg"
+                    alt="logoCO2"></a> emissions
+                        is everyone’s responsibility. The future of
                         our
                         planet depends on the actions we take today!.</p>
                     <img class="mission-image" src="images/mission3.webp" alt="">
@@ -1692,7 +1704,8 @@
                     <p>We love our customers, so feel free to visit
                         during working hours.</p>
                     <br>
-                    <h3><img style="width: 18px; height: 20px; margin-bottom: -2px;" src="images/X.svg" alt="logox">Green.Energy (XRG)</h3>
+                    <h3><img style="width: 14px; height: auto; margin-bottom: 0;" src="images/X.svg"
+                            alt="logox">Green.Energy (XRG)</h3>
                     <p> Ave of Stars, Tsim Sha Tsui, Hong Kong</p>
                 </div>
                 <div class="contact-mailto">
@@ -1741,7 +1754,11 @@
         <div class="container" style="margin:auto; display: flex; flex-direction: column; justify-content: center;">
             <a href="https://t.me/x_green_energy" class="cta-tel">t.me/x_green_energy</a>
             <p class="cta-tel-2">Get 10% Off Your First Contribution to Protecting
-                Nature! Invest in the future, reduce <span style="color: rgba(10, 143, 62, 0.9);">CO₂</span>, and support green
+                Nature! Invest in the future, reduce <a class ="" href="https://co2.support/" >
+                    <img style="width: 10px; height: auto;" src="images/CO2.svg"
+                    alt="logo2">
+                </a>, and
+                support green
                 technologies — start today!
             </p>
 
@@ -1768,8 +1785,11 @@
         </div>
 
         <div class="copyright">
-            <p> Copyright &copy; 2025 <img style="width: 14px; height: 14px; margin-bottom: -2px;" src="images/X.svg" alt="logox">Green.Energy (XRG) &amp; 
-                <span style="color: rgba(10, 143, 62, 0.9);">CO2</span>.Support - All Rights Reserved.
+            <p> Copyright &copy; 2025 <img style="width: 10px; height: auto;" src="images/X.svg"
+                    alt="logox">Green.Energy (XRG) &amp;
+                <a class ="" href="https://co2.support/" >
+                    <img style="width: 10px; height: auto;" src="images/CO2.svg"
+                    alt="logoCO2"></a>.Support <br>All Rights Reserved.
 
             </p>
             <p>
