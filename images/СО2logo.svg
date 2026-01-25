@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg2" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 997.6 607.1">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_Безымянный_градиент_2);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#_Безымянный_градиент);
+      }
+
+      .cls-3 {
+        fill: url(#_Безымянный_градиент_2-2);
+      }
+
+      .cls-4 {
+        fill: url(#_Безымянный_градиент-2);
+      }
+    </style>
+    <linearGradient id="_Безымянный_градиент" data-name="Безымянный градиент" x1="908.4" y1="601" x2="908.4" y2="460.7" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ebf9a3"/>
+      <stop offset="0" stop-color="#ebf9a3"/>
+      <stop offset=".3" stop-color="#9ef345"/>
+      <stop offset=".4" stop-color="#9ef345"/>
+      <stop offset=".5" stop-color="#3ac178"/>
+      <stop offset=".7" stop-color="#3ac178"/>
+      <stop offset=".9" stop-color="#33f7e7"/>
+      <stop offset="1" stop-color="#33f7e7"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент-2" data-name="Безымянный градиент" x1="393" y1="498.1" x2="393" y2="210.1" xlink:href="#_Безымянный_градиент"/>
+    <linearGradient id="_Безымянный_градиент_2" data-name="Безымянный градиент 2" x1="908.6" y1="345.2" x2="908.6" y2="479.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ebf9a3"/>
+      <stop offset="0" stop-color="#ebf9a3"/>
+      <stop offset=".3" stop-color="#9ef345"/>
+      <stop offset=".4" stop-color="#9ef345"/>
+      <stop offset=".5" stop-color="#3ac178"/>
+      <stop offset=".7" stop-color="#3ac178"/>
+      <stop offset=".9" stop-color="#33f7e7"/>
+      <stop offset="1" stop-color="#33f7e7"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_2-2" data-name="Безымянный градиент 2" x1="393" y1="1.8" x2="393" y2="265.3" xlink:href="#_Безымянный_градиент_2"/>
+  </defs>
+  <path class="cls-2" d="M877.7,570.9v-.7l18.7-17.6c30.7-29.6,54.5-54.4,68.5-79.2h-33.6c-14.1,21.7-38.4,46.2-73.8,79.9l-25.3,24.6v19.8h152.3v-26.8h-106.8Z"/>
+  <path class="cls-4" d="M718.1,238.6c-.3,100-51.4,182.9-141.7,182.9s-141.7-84.6-141.7-179.8,0-2.1,0-3.2h-60.4v4.5c0,133.8,81.4,225,198.8,225s204-80.1,205.3-229.5h-60.4.1ZM331,401.2c-23,11.2-58.4,18.4-93.8,18.4-106.9,0-169.3-68.9-169.3-177.8s0-2.1,0-3.2H7.6v5.1c0,145.7,93.2,224.4,217.8,224.4s96.4-10.5,116.8-21l-11.2-45.9Z"/>
+  <path class="cls-1" d="M978.6,424.5c0,17.2-4.9,33-13.7,48.9h-33.6c10.2-15.6,15-29.8,15-44.9,0-24.2-11.4-46.6-47-46.6s-39.7,11-50.6,20.2l-10.3-22.8c16.2-13.6,40-24.2,67.2-24.2,51.4,0,73.1,35.2,73.1,69.4h0Z"/>
+  <path class="cls-3" d="M434.6,239.5c.3-100,51.4-182.9,141.7-182.9s141.7,84.6,141.7,179.8,0,2.1,0,3.2h60.4v-4.5c0-133.8-81.4-225-198.8-225s-204,80.1-205.3,229.5h60.4-.1ZM238.5,11.5c54.5,0,89.9,11.8,105,19.7l-14.4,46.6c-21-10.5-51.8-18.4-88.6-18.4-102.7,0-171.3,65.1-172.5,179.2H7.6C9.8,102.3,103,11.5,238.5,11.5Z"/>
+</svg>
