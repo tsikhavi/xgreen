@@ -17,6 +17,7 @@
         }
         .backgroundimg{
             background-image: linear-gradient(to bottom,#071733, #010617,black, black);
+            margin: 0;
         }
 
         body {
@@ -25,7 +26,7 @@
             line-height: 1.6;
             font-smooth: antialiased;
             overflow-x: hidden;
-            padding: 0 5px;
+            padding: 0;
         }
 
         .container {
@@ -71,9 +72,8 @@
             background-size: cover;
             background-position: center;
             color: rgb(226, 226, 226);
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: inherit;
+            padding:0;
+            margin-bottom: 15px;
 
         }
 
@@ -556,8 +556,8 @@
         footer {
             background-color: #7a4979;
             color: white;
-            padding: 60px 20px 30px;
-            margin-top: 80px;
+            padding: 20px;
+            margin-top: 0px;
         }
 
         .footer-container {
@@ -676,6 +676,15 @@
         }
 
         @media (max-width: 768px) {
+
+            .hours-table {
+            width: 250px;
+            margin: auto;
+            display: inline-table;
+            justify-content: center;
+            align-items: center;
+            
+        }
 
             .hero {
                 padding: 80px 20px;
@@ -1404,7 +1413,7 @@
 
 <body >
     <!-- Header -->
-    <section class="hero" id="home" >
+    <section class="hero backgroundimg" id="home" >
         <header>
             <div class="logo-container" >
                 <a class="logo" href="/">
@@ -1436,8 +1445,8 @@
             <h1>
                 <img class="logox" style=" margin-top: 60px; " src="images/X.svg"
                     alt="logox">
-                Green.Energy (XRG) - The first tokenized green energy asset
-                <br>on XRP Ledger (XRPL)
+                Green.Energy (XRG) - The first tokenized green 
+                <br>energy asset on XRP Ledger (XRPL)
             </h1>
 
 
