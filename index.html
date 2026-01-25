@@ -43,6 +43,15 @@
 
         }
 
+        .logox{
+            width: 20px; height: auto;  margin-right: -10px;
+        }
+        .imgx {
+                width: 12px; height: auto; margin-right: -6px; margin-bottom: 1px;
+            }
+        .co21{
+            width: 24px; height: auto; margin-bottom: -4px;
+        }
         .contact-mailto {
             display: flex;
             justify-content: start;
@@ -678,8 +687,7 @@
             }
 
             .imgx {
-                width: 8px;
-                height: 10px;
+                width: 12px; height: auto; margin-right: -5px;
             }
 
             .hero h1 {
@@ -735,10 +743,25 @@
             text-decoration: none;
             padding-bottom: 20px;
         }
-
-        .cta-tel:hover {
-            color: #7a4979;
+ /* Text Gradient CSS */
+        .text-gradient {
+        color: #3CBF78;
+        background-image: linear-gradient(45deg, #3CBF78 , #BAF567 50%, #35E7C7 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
         }
+
+        .text-gradient:hover{
+           color: #3CBF78;
+        background-image: linear-gradient(45deg, #BAF567 , #9EF345 50%, #3AC178 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block; 
+        }
+      
 
         .cta-tel-2 {
             color: rgb(145, 145, 145);
@@ -1307,6 +1330,9 @@
         }
 
         @media (max-width: 576px) {
+            .logox{
+                width: 15px; height: auto; margin-right: -8px; margin-bottom: 2px;
+            }
             .inline-signup-form {
                 gap: 10px;
             }
@@ -1378,18 +1404,18 @@
 
 <body >
     <!-- Header -->
-    <section class="hero backgroundimg" id="home" >
+    <section class="hero" id="home" >
         <header>
             <div class="logo-container" >
                 <a class="logo" href="/">
-                    <img style="width: 250px;" src="images/logo.gif" alt="logo">
+                    <img style="width: 250px;" src="images/Transparent.gif" alt="logo">
                 </a>
             </div>
             <p style=" justify-content: center; padding-bottom: 40px; 
-                font-size: 24px; ;margin: 0px auto; font-weight: 600;
+                font-size: 24px; ;margin: -35px auto 0 auto; font-weight: 600;
                 max-width: fit-content; ">
                 <span>
-                    <img style="width: 14px; height: auto; margin-right: -8px;  " src="images/X.svg" alt="logox">
+                    <img style=" margin-right: -8px; width: 14px; height: auto; " src="images/X.svg" alt="logox">
                 </span>
                 Green.Energy (XRG)
             </p>
@@ -1408,7 +1434,7 @@
 
             </div>
             <h1>
-                <img style="width: 24px; height: auto; margin-top: 60px; margin-right: -10px; " src="images/X.svg"
+                <img class="logox" style=" margin-top: 60px; " src="images/X.svg"
                     alt="logox">
                 Green.Energy (XRG) - The first tokenized green energy asset
                 <br>on XRP Ledger (XRPL)
@@ -1431,11 +1457,11 @@
                 White Paper (ENG)
             </a>
             <a href="https://drive.google.com/file/d/1vCZyod_JYK69IeStv_6L0DbSM6yrERPM/view?actionitemdetails="
-                target="_blank" class="purple-white-paper-btn button-width">
+                target="_blank" class="purple-white-paper-btn button-width" style="font-size: medium;">
                 白皮书 (中文)
             </a>
             <a href="https://drive.google.com/file/d/1Fuv5La7ejAaM25v77sPchJIsVi4hHfW2/view?actionitemdetails="
-                target="_blank" class="purple-white-paper-btn button-width" style="font-size: larger;">
+                target="_blank" class="purple-white-paper-btn button-width" style="font-size: large;">
                 กระดาษสีขาว (ไทย)
             </a>
             <a href="https://drive.google.com/file/d/163yakcpKL1HoMyTTtXY7wmmNY1EEk--e/view?actionitemdetails="
@@ -1473,7 +1499,7 @@ background-image: url('images/image1.jfif');
 
 
             <p class="hero-tag" style="line-height: 160%;">
-                <img class="imgx" style="width: 14px; height: auto; margin-right: -6px; margin-bottom: 0;"
+                <img class="imgx" 
                     src="images/X.svg" alt="logox">
                 Green.Energy (XRG) is the new reality of a self-sustaining energy economy, where green
                 energy is a fundamental asset, tokenized into XRG and implemented on the XRP Ledger (XRPL)
@@ -1600,8 +1626,8 @@ background-image: url('images/image1.jfif');
 
 
 
-                    <p>Contribute to Nature – Reduce <a class ="" href="https://co2.support/" style="color: rgba(10, 143, 62, 0.9);">
-                        <img style="width: 20px; height: auto; margin-bottom: -2px;" src="images/CO2logo.svg"
+                    <p>Contribute to Nature – Reduce <a class ="co" href="https://co2.support/" style="color: rgba(10, 143, 62, 0.9);">
+                        <img class="co21" src="images/СО2logo.svg"
                     alt="logoCO2"></a>
                         Emissions!<br>
                         Be part of a sustainable future: lower your carbon footprint, invest in carbon credits,
@@ -1628,7 +1654,7 @@ background-image: url('images/image1.jfif');
                     <p>This is our shared mission!<br>
                         Protecting nature and reducing 
                         <a class ="" href="https://co2.support/" >
-                            <img style="width: 20px; height: auto; margin-bottom: -2px;" src="images/CO2logo.svg"
+                            <img class="co21" src="images/СО2logo.svg"
                     alt="logoCO2"></a> emissions
                         is everyone’s responsibility. The future of
                         our
@@ -1716,7 +1742,7 @@ background-image: url('images/image1.jfif');
                 </div>
                 <div class="contact-mailto">
                     <a class="info-c" rel="" role="link" aria-haspopup="false" href="mailto:contact@xgreen.energy">
-                        contact@xgreen.energy</a>
+                        <span class="text-gradient">contact@xgreen.energy</span></a>
                 </div>
                 <div class="info-card">
                     <h3 style="margin-top: 40px;"> Business Hours</h3>
@@ -1758,11 +1784,11 @@ background-image: url('images/image1.jfif');
     <!-- Footer -->
     <footer class="footer">
         <div class="container" style="margin:auto; display: flex; flex-direction: column; justify-content: center;">
-            <a href="https://t.me/x_green_energy" class="cta-tel">t.me/x_green_energy</a>
+            <a href="https://t.me/x_green_energy" class="cta-tel"><span class="text-gradient">t.me/x_green_energy</span></a>
             <p class="cta-tel-2">Get 10% Off Your First Contribution to Protecting
                 Nature! Invest in the future, reduce 
                 <a style="text-decoration-line: none; white-space: collapse;" href="https://co2.support/" >
-                    <img style="width: 24px; height: auto; margin-bottom: -2px;" src="images/CO2logo.svg"
+                    <img class="co21" src="images/СО2logo.svg"
                     alt="logo2">
                 </a>emissions and support green technologies — start today!
             </p>
@@ -1793,7 +1819,7 @@ background-image: url('images/image1.jfif');
             <p> Copyright &copy; 2025 <img style="width: 10px; height: auto;" src="images/X.svg"
                     alt="logox">Green.Energy (XRG) &amp;
                 <a class ="" href="https://co2.support/" >
-                    <img style="width: 20px; height: auto; margin-bottom: -2px;" src="images/CO2logo.svg"
+                    <img style="width: 24px; height: auto;" src="images/CO2.svg"
                     alt="logoCO2"></a>.Support <br>All Rights Reserved.
 
             </p>
