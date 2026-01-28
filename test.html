@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xGreen.Energy (XRG) - First Tokenized Green Energy Asset on XRP Ledger</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/2e59257349.js" crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
         * {
@@ -15,8 +15,9 @@
             box-sizing: border-box;
             font-family: 'Open Sans', Arial, Helvetica, sans-serif;
         }
-        .backgroundimg{
-            background-image: linear-gradient(to bottom,#071733, #010617,black, black);
+
+        .backgroundimg {
+            background-image: linear-gradient(to bottom, #071733, #010617, black, black);
             margin: 0;
         }
 
@@ -44,15 +45,51 @@
 
         }
 
-        .logox{
-            width: 20px; height: auto;  margin-right: -10px;
+        .logox {
+            width: 250px;
+            height: auto;
+            margin: auto;
+            padding-top: 0.5rem;
         }
+
         .imgx {
-                width: 12px; height: auto; margin-right: -6px; margin-bottom: 1px;
-            }
-        .co21{
-            width: 24px; height: auto; margin-bottom: -4px;
+            width: 280px;
+            height: max-content;
+            margin-bottom: -8px;
         }
+
+        .imgy {
+            width: 170px;
+            height: max-content;
+            margin-bottom: -4px;
+        }
+
+        .co222 {
+            text-decoration: none;
+        }
+
+        .co222:hover {
+            background-color: #BAF567aa;
+        }
+
+        .imgz {
+            width: 150px;
+            height: max-content;
+            margin-bottom: -4px;
+        }
+
+        .imgw {
+            width: 120px;
+            height: max-content;
+            margin-bottom: -4px;
+        }
+
+        .co21 {
+            width: 24px;
+            height: auto;
+            margin-bottom: -4px;
+        }
+
         .contact-mailto {
             display: flex;
             justify-content: start;
@@ -72,7 +109,7 @@
             background-size: cover;
             background-position: center;
             color: rgb(226, 226, 226);
-            padding:0;
+            padding: 0;
             margin-bottom: 15px;
 
         }
@@ -501,6 +538,16 @@
             margin-bottom: 2px;
             font-size: 22px;
         }
+        .grid-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 500px;
+            max-width: 1200px; 
+            gap: 20px; 
+            padding: 20px;
+          
+        }
+        
 
         .hours-table {
             width: 100%;
@@ -638,7 +685,27 @@
         .telegram-cta a:hover {
             text-decoration: underline;
         }
-
+        .text-column {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+.image-column {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #f0f2f5;
+        }
+        
+        .image-column img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
         .cookie-notice {
             background-color: rgba(0, 0, 0, 0.2);
             padding: 15px;
@@ -677,14 +744,30 @@
 
         @media (max-width: 768px) {
 
-            .hours-table {
-            width: 250px;
-            margin: auto;
-            display: inline-table;
-            justify-content: center;
-            align-items: center;
+               .grid-row {
+                grid-template-columns: 1fr;
+            }
             
-        }
+            .image-column {
+                min-height: 300px;
+            }
+            
+            .text-column {
+                padding: 30px 20px;
+            }
+            
+            .text-column h2 {
+                font-size: 1.6rem;
+            }
+      
+            .hours-table {
+                width: 250px;
+                margin: auto;
+                display: inline-table;
+                justify-content: center;
+                align-items: center;
+
+            }
 
             .hero {
                 padding: 80px 20px;
@@ -696,7 +779,9 @@
             }
 
             .imgx {
-                width: 12px; height: auto; margin-right: -5px;
+                width: 250px;
+                height: auto;
+                margin-bottom: -5px;
             }
 
             .hero h1 {
@@ -726,8 +811,12 @@
 
         @media (max-width: 576px) {
             .imgx {
-                width: 10px; height: auto; margin-right: -5px; margin-bottom: 0px;
+                width: 250px;
+                height: auto;
+                margin-bottom: -6px;
             }
+
+
             .anchor {
                 flex-direction: column;
             }
@@ -747,39 +836,34 @@
         }
 
         .cta-tel {
+            color: rgba(10, 143, 62, 0.5);
+            font-size: 44px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.25;
+            text-decoration: none;
             padding-bottom: 20px;
-            width: 60%;
-            margin: auto;
-            cursor: pointer;
-            height: auto;
         }
 
-        .cta-contact {
-            padding-bottom: 20px;
-            width: 60%;
-            margin: 0;
-            cursor: pointer;
-            height: auto;
-        }
- /* Text Gradient CSS */
+        /* Text Gradient CSS */
         .text-gradient {
-        color: #3CBF78;
-        background-image: linear-gradient(45deg, #3CBF78 , #BAF567 50%, #35E7C7 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block;
+            color: #3CBF78;
+            background-image: linear-gradient(45deg, #3CBF78, #BAF567 50%, #35E7C7 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
         }
 
-        .text-gradient:hover{
-           color: #3CBF78;
-        background-image: linear-gradient(45deg, #BAF567 , #9EF345 50%, #3AC178 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block; 
+        .text-gradient:hover {
+            color: #3CBF78;
+            background-image: linear-gradient(45deg, #BAF567, #9EF345 50%, #3AC178 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
         }
-      
+
 
         .cta-tel-2 {
             color: rgb(145, 145, 145);
@@ -1348,9 +1432,14 @@
         }
 
         @media (max-width: 576px) {
-            .logox{
-                width: 15px; height: auto; margin-right: -8px; margin-bottom: 2px;
+
+            .logox {
+                width: 250px;
+                height: auto;
+                margin: auto;
+                padding-top: 0.5rem;
             }
+
             .inline-signup-form {
                 gap: 10px;
             }
@@ -1420,11 +1509,11 @@
     </style>
 </head>
 
-<body >
+<body>
     <!-- Header -->
-    <section class="hero backgroundimg" id="home" >
+    <section class="hero backgroundimg" id="home">
         <header>
-            <div class="logo-container" >
+            <div class="logo-container">
                 <a class="logo" href="/">
                     <img style="width: 250px;" src="images/Transparent.gif" alt="logo">
                 </a>
@@ -1433,9 +1522,8 @@
                 font-size: 24px; ;margin: -35px auto 0 auto; font-weight: 600;
                 max-width: fit-content; ">
                 <span>
-                    <img style=" margin-right: -8px; width: 14px; height: auto; " src="images/X.svg" alt="logox">
+                    <img class="logox" src="images/XGreen_Energy.svg" alt="logo">
                 </span>
-                Green.Energy (XRG)
             </p>
         </header>
 
@@ -1452,9 +1540,8 @@
 
             </div>
             <h1>
-                <img class="logox" style=" margin-top: 60px; " src="images/X.svg"
-                    alt="logox">
-                Green.Energy (XRG) - The first tokenized green 
+                <img class="imgx" style=" margin-top: 60px; " src="images/XGreen_Energy.svg" alt="logox">
+                - The first tokenized green
                 <br>energy asset on XRP Ledger (XRPL)
             </h1>
 
@@ -1489,15 +1576,15 @@
         </div>
 
     </section>
-    <div class="container" >
-    <div style="max-width: 1160px; padding-left: 60px; height: 500px; 
+    <div class="container">
+        <div style="max-width: 1160px; padding-left: 60px; height: 500px; 
 
 background-image: url('images/image1.jfif'); 
     background-size: cover; background-position: center; 
     background-repeat: no-repeat;">
 
+        </div>
     </div>
-</div>
     <section class="container " style=" max-height: fit-content; margin-top: 60px; max-width: 1200px;">
         <div style="padding:125% 0 0 0;position:relative;">
             <iframe
@@ -1513,13 +1600,13 @@ background-image: url('images/image1.jfif');
         <h2 style="text-align: center; ">
             XRG (green energy key)
         </h2>
+
         <div>
 
 
             <p class="hero-tag" style="line-height: 160%;">
-                <img class="imgx" 
-                    src="images/X.svg" alt="logox">
-                Green.Energy (XRG) is the new reality of a self-sustaining energy economy, where green
+                <img class="imgy" src="images/XGreen_Energy.svg" alt="logox">
+                is the new reality of a self-sustaining energy economy, where green
                 energy is a fundamental asset, tokenized into XRG and implemented on the XRP Ledger (XRPL)
                 in compliance with the ISO 20022 standard.
             </p>
@@ -1644,9 +1731,8 @@ background-image: url('images/image1.jfif');
 
 
 
-                    <p>Contribute to Nature – Reduce <a class ="co" href="https://co2.support/" style="color: rgba(10, 143, 62, 0.9);">
-                        <img class="co21" src="images/СО2logo.svg"
-                    alt="logoCO2"></a>
+                    <p>Contribute to Nature – Reduce <a class="co222" href="https://co2.support/">
+                            <img class="co21" src="images/СО2logo.svg" alt="logoCO2"></a>
                         Emissions!<br>
                         Be part of a sustainable future: lower your carbon footprint, invest in carbon credits,
                         and
@@ -1670,13 +1756,13 @@ background-image: url('images/image1.jfif');
 
 
                     <p>This is our shared mission!<br>
-                        Protecting nature and reducing 
-                        <a class ="" href="https://co2.support/" >
-                            <img class="co21" src="images/СО2logo.svg"
-                    alt="logoCO2"></a> emissions
+                        Protecting nature and reducing
+                        <a class="co222" href="https://co2.support/">
+                            <img class="co21" src="images/СО2logo.svg" alt="logoCO2"></a> emissions
                         is everyone’s responsibility. The future of
                         our
-                        planet depends on the actions we take today!</p>
+                        planet depends on the actions we take today!
+                    </p>
                     <img class="mission-image" src="images/mission3.webp" alt="">
 
                 </div>
@@ -1689,7 +1775,7 @@ background-image: url('images/image1.jfif');
 
     <section class="container " style=" max-height: fit-content; ">
         <h2 class="section-title">Check Out This Great Video</h2>
-        <div style="padding:50% 0; max-height: fit-content;position:relative; margin-top: 0px;">
+        <div style="padding:55% 0 0 0; position:relative;">
             <!---->
             <iframe
                 src="https://player.vimeo.com/video/1155425872?h=e0e7c02af1?badge=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
@@ -1699,6 +1785,56 @@ background-image: url('images/image1.jfif');
                 style="position:absolute;top:0;left:0;width:100%;height:100%;" title="IMG_8223">
             </iframe>
         </div>
+        <h2 class="section-title">Connecting virtual reality(gameplay) with the real world</h2>
+
+    </section>
+    <section class="container grid-row backgroundimg" >
+        <div class="image-column">
+            <img src="images/Transparent.gif">
+        </div>
+        <div class="text-column">
+            <h2><img class="imgy" src="images/XGreen_Energy.svg" alt="logox"></h2>
+            <p >is the new reality of a self-sustaining energy economy, where green energy is a fundamental asset, tokenized into XRG and implemented on the XRP Ledger (XRPL) in compliance with the ISO 20022 standard.
+            </p>
+        </div>
+        <div class="text-column">
+            <h2>Connect the two worlds</h2>
+            <p class="">Connecting virtual reality( gameplay) with the
+                 real world
+            </p>
+        </div>
+        <div class="image-column">
+            <div class="image-column">
+    <div style="position: relative; width: 100vw; background-color: #000; height: 40vw; margin-left: calc(-50vw + 50%);">
+        <iframe
+            src="https://player.vimeo.com/video/1155431266?badge=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="green island CO2.Support (CO2)"></iframe>
+    </div>
+</div>
+        </div>
+        
+        <div class="image-column">
+            <img src="images/2.webp">
+        </div>
+        <div class="text-column">
+            <h2>New standard class of assets</h2>
+            <p class="">Tokenization green energy solutions </p>
+        </div>
+        
+        <div class="text-column">
+            <h2>Manage your energy</h2>
+            <p class="">Energy in everything around us </p>
+        </div>
+        <div class="image-column">
+            <img src="images/1.webp">
+        </div>
+        
+        
+
     </section>
     <!-- Contact Section -->
     <section class="container" id="contact">
@@ -1754,13 +1890,12 @@ background-image: url('images/image1.jfif');
                     <p>We love our customers, so feel free to visit
                         during working hours.</p>
                     <br>
-                    <h3><img style="width: 14px; height: auto; margin-bottom: 0;" src="images/X.svg"
-                            alt="logox">Green.Energy (XRG)</h3>
+                    <h3><img class="imgx" src="images/XGreen_Energy.svg" alt="logox"></h3>
                     <p> Ave of Stars, Tsim Sha Tsui, Hong Kong</p>
                 </div>
                 <div class="contact-mailto">
-                    <a class="cta-contact" rel="" role="link" aria-haspopup="false" href="mailto:contact@xgreen.energy">
-                        <img src="images/contact.svg"></a>
+                    <a class="info-c" rel="" role="link" aria-haspopup="false" href="mailto:contact@xgreen.energy">
+                        <span class="text-gradient">contact@xgreen.energy</span></a>
                 </div>
                 <div class="info-card">
                     <h3 style="margin-top: 40px;"> Business Hours</h3>
@@ -1802,12 +1937,12 @@ background-image: url('images/image1.jfif');
     <!-- Footer -->
     <footer class="footer">
         <div class="container" style="margin:auto; display: flex; flex-direction: column; justify-content: center;">
-            <a href="https://t.me/x_green_energy" class="cta-tel"><img src="images/t.me.svg" ></a>
+            <a href="https://t.me/x_green_energy" class="cta-tel"><span
+                    class="text-gradient">t.me/x_green_energy</span></a>
             <p class="cta-tel-2">Get 10% Off Your First Contribution to Protecting
-                Nature! Invest in the future, reduce 
-                <a style="text-decoration-line: none; white-space: collapse;" href="https://co2.support/" >
-                    <img class="co21" src="images/СО2logo.svg"
-                    alt="logo2">
+                Nature! Invest in the future, reduce
+                <a class="co222" style="text-decoration-line: none; white-space: collapse;" href="https://co2.support/">
+                    <img class="co21" src="images/СО2logo.svg" alt="logo2">
                 </a>emissions and support green technologies — start today!
             </p>
 
@@ -1818,13 +1953,14 @@ background-image: url('images/image1.jfif');
                 <button type="submit" class="purple-white-paper-btn ">Sign up</button>
             </div>
 
+
             <div class="social-links">
-                <a href="https://discord.com/users/1319212969455910954"><i class="fab fa-discord"></i></a>
-                <a href="https://www.instagram.com/xgreen.energy"><i class="fab fa-instagram"></i></a>
-                <a href="https://t.me/x_green_energy"><i class="fab fa-telegram"></i></a>
-                <a href="https://www.x.com/xgreen_energy" class="x-icon">𝕏</a>
-                <a href="https://www.tiktok.com/@xgreen.energy"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.youtube.com/@xGreen.Energy"><i class="fab fa-youtube"></i></a>
+                <a href="https://discord.com/users/1319212969455910954"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://www.instagram.com/xgreen.energy"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://t.me/x_green_energy"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.x.com/xgreen_energy" class="x-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.tiktok.com/@xgreen.energy"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@xGreen.Energy"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
 
@@ -1834,11 +1970,10 @@ background-image: url('images/image1.jfif');
         </div>
 
         <div class="copyright">
-            <p> Copyright &copy; 2025 <img style="width: 10px; height: auto;" src="images/X.svg"
-                    alt="logox">Green.Energy (XRG) &amp;
-                <a class ="" href="https://co2.support/" >
-                    <img style="width: 24px; height: auto;" src="images/CO2.svg"
-                    alt="logoCO2"></a>.Support <br>All Rights Reserved.
+            <p> Copyright &copy; 2025 <img class="imgz" src="images/XGreen_Energy.svg" alt="logox"> &amp;
+                <a class="co222" href="https://co2.support/">
+                    <img class="imgw" src="images/Support.svg" alt="logoCO2"></a><br>All Rights
+                Reserved.
 
             </p>
             <p>
