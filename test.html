@@ -744,10 +744,29 @@
 
         @media (max-width: 768px) {
 
-               .grid-row {
+             .grid-row {
                 grid-template-columns: 1fr;
+                gap: 25px;
             }
             
+            /* Reorder grid items for mobile */
+            .grid-row > *:nth-child(1) { order: 1; } /* Image */
+            .grid-row > *:nth-child(2) { order: 2; } /* Text about XRG */
+            .grid-row > *:nth-child(3) { order: 3; } /* Text about connecting worlds */
+            .grid-row > *:nth-child(4) { order: 4; } /* Video */
+            .grid-row > *:nth-child(5) { order: 5; } /* Image */
+            .grid-row > *:nth-child(6) { order: 6; } /* Text about assets */
+            .grid-row > *:nth-child(7) { order: 7; } /* Text about energy */
+            .grid-row > *:nth-child(8) { order: 8; } /* Image */
+            
+            /* Specifically for the video section - text comes first */
+           .grid-row > *:nth-child(2) { order: 1; } /* Text about XRG */
+           .grid-row > *:nth-child(1) { order: 2; } /* Image */
+            .grid-row > *:nth-child(3) { order: 3; } /* Text "Connect the two worlds" */
+            .grid-row > *:nth-child(4) { order: 4; } /* Video */
+            .grid-row > *:nth-child(6) { order: 5; } /* Text about assets */
+            .grid-row > *:nth-child(5) { order: 6; } /* Image */
+
             .image-column {
                 min-height: 300px;
             }
@@ -1773,7 +1792,7 @@ background-image: url('images/image1.jfif');
         </div>
     </section>
 
-    <section class="container " style=" max-height: fit-content; ">
+    <section class="container " style=" max-height: fit-content; margin-bottom: 20px; ">
         <h2 class="section-title">Check Out This Great Video</h2>
         <div style="padding:55% 0 0 0; position:relative;">
             <!---->
@@ -1785,10 +1804,9 @@ background-image: url('images/image1.jfif');
                 style="position:absolute;top:0;left:0;width:100%;height:100%;" title="IMG_8223">
             </iframe>
         </div>
-        <h2 class="section-title">Connecting virtual reality(gameplay) with the real world</h2>
 
     </section>
-    <section class="container grid-row backgroundimg" >
+    <section class="container grid-row backgroundimg" style="padding: 20px;" >
         <div class="image-column">
             <img src="images/Transparent.gif">
         </div>
@@ -1804,17 +1822,7 @@ background-image: url('images/image1.jfif');
             </p>
         </div>
         <div class="image-column">
-            <div class="image-column">
-    <div style="position: relative; width: 100vw; background-color: #000; height: 40vw; margin-left: calc(-50vw + 50%);">
-        <iframe
-            src="https://player.vimeo.com/video/1155431266?badge=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-            title="green island CO2.Support (CO2)"></iframe>
-    </div>
-</div>
+    <div style="position:relative; width:100%; max-width: 100vw; height: 100%; min-height: 50vh; padding: 10px; background-color: #000;"><iframe src="https://player.vimeo.com/video/1155431266?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="green island CO2.Support (CO2)"></iframe></div>
         </div>
         
         <div class="image-column">
