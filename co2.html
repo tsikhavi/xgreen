@@ -229,7 +229,6 @@
 
         .token-address {
             color: var(--text-light);
-            word-break: break-all;
             text-align: center;
         }
         .token-address:hover { color: var(--bilbao-700); }
@@ -601,10 +600,12 @@
             .about-grid, .aboutt-grid { grid-template-columns: 1fr; }
             .hero-tagline { font-size: 24px; }
             .hero-tag { font-size: 16px; width: 95%; }
-            .btn { width: 100%; max-width: 300px; }
+            .btn { width: 100%; }
+
             .inline-signup-form input { max-width: 280px; }
             .cta-tel-2 { width: 100%; font-size: 14px; }
             .logox { width: 220px; }
+            .token-address {text-align: center; font-size: small; }
         }
 
         @media (max-width: 375px) {
@@ -651,7 +652,7 @@
                 <p style="display: flex; justify-content: center; margin-bottom: -5px; color: var(--bilbao-100);">
                     Token Address:
                 </p>
-                <p>
+                <p style="white-space: nowrap;">
                     <a class="token-address text-bilbao-200" href="https://xpmarket.com/token/XRG-rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp">
                         rNqb5BzLoR1NENpKBnrDsgLvP5C9SMbwUp
                     </a>
