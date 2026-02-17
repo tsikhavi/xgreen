@@ -29,93 +29,158 @@
             overflow-x: hidden;
             padding: 0;
         }
+ /* main grid container: 3 columns, 2 rows → exactly 3 above + 3 below */
+        .grid-six {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* three equal columns */
+            gap: 0rem;
+            /* breathing space between cards */
+            max-width: 100%;
+            margin: 0 auto;
+            place-items: center;
+        }
 
-           /* main grid container: 3 columns, 2 rows → exactly 3 above + 3 below */
-    .grid-six {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);   /* three equal columns */
-      gap: 1.5rem;                              /* breathing space between cards */
-      width: 100%;
-      max-width: 1200px;                        /* stop growing on huge screens */
-      margin: 0 auto;
-    }
+        .grid-two {
+            display: flex;
+            gap: 0rem;
+            /* breathing space between cards */
+            max-width: 100%;
+            margin: 0 auto;
+            place-items: center;
+            justify-content: space-around;
+            width: screen;
+        }
+        .grid-two img{
+            width: 200px;
 
-    /* every element gets a consistent card look */
-    .grid-item {
-      background: transparent;
-      backdrop-filter: blur(4px);
-      background: transparent;
-      border-radius: 2rem;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      transition: all 0.25s ease;
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      font-size: 1.3rem;
-      letter-spacing: 0.01em;
-      min-height: 160px;        /* keeps comfortable area, but flexible */
-      word-break: break-word;
-      box-decoration-break: clone;
-    }
+        }
 
-    /* subtle hover – friendly & responsive (no layout shift) */
-    .grid-item:hover {
-      transform: scale(1.02) translateY(-4px);
-      border-color: rgba(255, 255, 255, 0.9);
-    }
+        /* every element gets a consistent card look */
+        .grid-item {
+            backdrop-filter: blur(2px);
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.25s ease;
+            font-size: 1.3rem;
+            letter-spacing: 0.01em;
+            box-decoration-break: clone;
+            width: 1/3;
+            
+        }
+
+        .grid-item img{
+            width: 100%;
+            height: 65px;
+        }
+
+        /* subtle hover – friendly & responsive (no layout shift) */
+        .grid-item:hover {
+            transform: scale(1.02) translateY(-4px);
+        }
 
 
-   
-    /* tablet / small laptop → keep 3 columns unless width < 780px */
-    @media screen and (max-width: 780px) {
-      .grid-six {
-        grid-template-columns: repeat(2, 1fr);  /* 2 columns → rows of two */
-        gap: 1.2rem;
-      }
-      .grid-item {
-        min-height: 140px;
-        padding: 1.8rem 1rem;
-        font-size: 1.2rem;
-        border-radius: 1.6rem;
-      }
-    }
 
-    /* mobile phones – single column, smooth stack */
-    @media screen and (max-width: 500px) {
-      .grid-six {
-        grid-template-columns: 1fr;  /* one column, 6 rows */
-        gap: 1rem;
-      }
-      .grid-item {
-        min-height: 120px;
-        padding: 1.5rem 1rem;
-        font-size: 1.2rem;
-        border-radius: 1.8rem;
-        backdrop-filter: none;        /* lighter on mobile */
-      }
-    }
+        /* tablet / small laptop → keep 3 columns unless width < 780px */
+        @media screen and (max-width: 780px) {
+            .grid-six {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* three equal columns */
+            gap: 0rem;
+            /* breathing space between cards */
+            max-width: 100%;
+            margin: 20px auto;
+            place-items: center;
+        }
 
-    /* extra large screens: the gap grows a tiny bit */
-    @media screen and (min-width: 1400px) {
-      .grid-six {
-        gap: 2rem;
-      }
-      .grid-item {
-        padding: 2.5rem 2rem;
-        font-size: 1.5rem;
-      }
-    }
+            .grid-item {
+                height: 60px;
+                width: 100%;
+                font-size: 1.2rem;
+                border-radius: 1.6rem;
+                margin: 10px auto;
+            }
+
+            .grid-item img{
+            width: 100%;
+            height: 60px;
+        }
+        }
+
+         /* tablet / small laptop → keep 3 columns unless width < 780px */
+        @media (min-width: 500px)and (max-width: 780px) {
+           
+
+            .grid-item {
+                height: 50px;
+                width: 100%;
+                font-size: 1.2rem;
+                border-radius: 1.6rem;
+                margin: 10px auto;
+            }
+
+            .grid-item img{
+            width: 100%;
+            height: 50px;
+        }
+        }
+
+        /* mobile phones – single column, smooth stack */
+        @media screen and (max-width: 500px) {
+            .grid-six {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* three equal columns */
+            gap: 0rem;
+            /* breathing space between cards */
+            width: 100%;
+            margin: 0 auto;
+            place-items: center;
+        }
+
+            .grid-item {
+                width: 100%;
+                height: 20px;
+                font-size: 1.2rem;
+                border-radius: 1.8rem;
+                backdrop-filter: none;
+                /* lighter on mobile */
+            }
+
+            .grid-item img {
+                width: 100%;
+                height: 30px;
+                font-size: 1.2rem;
+                border-radius: 1.8rem;
+                backdrop-filter: none;
+                /* lighter on mobile */
+            }
+        }
+
+        /* extra large screens: the gap grows a tiny bit */
+        @media screen and (min-width: 1400px) {
+            
+            .grid-item {
+                font-size: 1.5rem;
+            }
+        }
+
+
+
+        /* remove pseudo on very small screens to keep clean look (optional) */
+        @media screen and (max-width: 400px) {
+            .grid-item::before {
+                display: none;
+            }
+        }
 
     
 
-    /* remove pseudo on very small screens to keep clean look (optional) */
-    @media screen and (max-width: 400px) {
-      .grid-item::before {
-        display: none;
-      }
-    }
+       
 
 
         .container {
@@ -644,89 +709,12 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             min-height: 500px;
-            max-width: 1200px; 
+            max-width: 1160px; 
             gap: 20px; 
-            padding: 20px;
           
         }
          
-    /* each grid item is an anchor (link) */
-    .grid-item {
-      display: block;
-      background-color: #ffffff;
-      border-radius: 20px;
-      overflow: hidden;          /* keeps image corners rounded */
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08), 0 6px 6px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.25s ease;
-      text-decoration: none;     /* remove underline from anchor */
-      border: 1px solid rgba(0,0,0,0.03);
-    }
-
-    /* subtle interactive feedback */
-    .grid-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 30px rgba(0,0,0,0.12), 0 8px 12px rgba(0,0,0,0.1);
-    }
-
-    .grid-item:focus-visible {
-      outline: 3px solid #1e6df2;
-      outline-offset: 2px;
-    }
-
-    /* image fills the anchor, maintaining aspect ratio */
-    .grid-item img {
-      display: block;
-      width: 100%;
-      height: auto;              /* intrinsic height, keeps proportions */
-      aspect-ratio: 4 / 3;       /* consistent rectangle – you can change to 1/1 for squares */
-      object-fit: cover;         /* crops nicely without stretching */
-      background-color: #e0e5ec; /* subtle placeholder while loading */
-      transition: opacity 0.2s;
-    }
-
-    /* optional minimal caption / label (still clickable) */
-    .grid-item span {
-      display: block;
-      padding: 0.9rem 0.8rem 1rem 0.8rem;
-      font-weight: 500;
-      font-size: 1rem;
-      color: #1e2b3c;
-      text-align: center;
-      letter-spacing: 0.01em;
-      background: white;
-      border-top: 1px solid #eef2f6;
-    }
-
-    /* make sure the whole card is one coherent link */
-    .grid-item span::before {
-      content: "🔗 ";            /* tiny visual hint for anchor */
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
-
-       /* responsive adjustments: on narrow screens, keep 3 columns but shrink gap */
-    
-
-    /* if screen becomes very small (under 480px) we still keep 3 columns,
-       but images will become tiny – you might switch to 2 columns.
-       uncomment the lines below if you prefer 2 columns on mobile */
-    /*
-    @media (max-width: 500px) {
-      .image-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    */
-
-    /* for extra small devices (under 360px) we keep 3 columns but adjust span */
-    @media (max-width: 380px) {
-      .grid-item span {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.2rem;
-      }
-    }
-
-    
+   
 
         .hours-table {
             width: 100%;
@@ -1738,6 +1726,48 @@
                 </p>
 
             </div>
+            <section style="margin: 20px auto; 
+            width: 85%; border-radius: 2rem; padding: 10px 0;">
+                <div class="grid-six" >
+
+                    <div class="grid-item" data-label="Apple Pay">
+                        <a class="co222" href="https://www.apple.com/apple-pay/">
+                            <img src="images/Apay_w-01.svg">
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item" data-label="XRP">
+                        <a class="co222" href="https://xpmarket.com/amm/pool/CO2-rNqb5BzLoR1NENpKBnrDsgLvP5C9SMbwUp/XRP">
+                          <img src="images/XRP_w-01.svg">  
+                        </a>
+                        
+                    </div>
+                    
+                    
+                    <div class="grid-item" data-label="VISA">
+                        <a class="co222" href="https://www.visa.com/en-us">
+                            <img src="images/visa_w-01.svg">
+                        </a>
+                    </div>
+                    <div class="grid-item" data-label="Google Pay">
+                       <a class="co222" href="https://pay.google.com/">
+                        <img src="images/Gpay_w-01.svg">
+                       </a> 
+                    </div>
+                    <div class="grid-item" data-label="RLUSD">
+                        <a class="co222" href="https://xpmarket.com/amm/pool/CO2-rNqb5BzLoR1NENpKBnrDsgLvP5C9SMbwUp/RLUSD-rMxCKbEDwqr76QuheSUMdEGf4B9xJ8m5De">
+                            <img src="images/RLUSD_w-01.svg">
+                        </a>
+                    </div>
+                    <div class="grid-item" data-label="Master Card">
+                        <a class="co222" href="https://www.mastercard.com/global/en.html">
+                            <img src="images/mastercard_w-01.svg">
+                        </a>
+                    </div>
+
+                </div>
+
+            </section>
            
             <h1>
                 <img class="imgx" style=" margin-top: 60px; " src="images/XGreen_Energy_-01.svg" alt="logox">
@@ -1775,7 +1805,28 @@
             </a>
         </div>
 
-        
+        <section style="margin: 20px auto; width: 100%;">
+                <div class="grid-two" >
+
+                    
+                    <div class="grid-item" data-label="XRP">
+                       <a href="https://apps.apple.com/">
+                        <img src="images/AppStore_w-01.svg">
+                    </a> 
+                       
+                    </div>
+                    
+                    <div class="grid-item" data-label="Apple Pay">
+                       <a href="https://store.google.com/">
+                        <img src="images/Gplay_w-01.svg">
+                    </a> 
+                    </div>
+                    
+                    
+
+                </div>
+
+            </section>
 
     </section>
     <div class="container">
@@ -1989,13 +2040,16 @@ background-image: url('images/image1.jfif');
         </div>
 
     </section>
-    <section class="container grid-row backgroundimg" style="padding: 20px;" >
+    <section class="container grid-row backgroundimg" style="margin: auto;" >
         <div class="image-column">
             <img src="images/Transparent.gif">
         </div>
         <div class="text-column">
             <h2><img class="imgy" src="images/XGreen_Energy.svg" alt="logox"></h2>
-            <p >is the new reality of a self-sustaining energy economy, where green energy is a fundamental asset, tokenized into XRG and implemented on the XRP Ledger (XRPL) in compliance with the ISO 20022 standard.
+            <p >is the new reality of a self-sustaining energy economy, where green energy is a 
+                fundamental asset, 
+                tokenized into XRG and implemented on the XRP Ledger (XRPL) in compliance with 
+                the ISO 20022 standard.
             </p>
         </div>
         <div class="text-column">
