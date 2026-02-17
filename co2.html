@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@
            BILBAO COLOR PANELLE (CSS variables & utility classes)
            ------------------------------------------------------- */
         :root {
-            --bilbao-50:  #effee7;
+            --bilbao-50: #effee7;
             --bilbao-100: #dbfccb;
             --bilbao-200: #baf99d;
             --bilbao-300: #8ff165;
@@ -32,31 +33,97 @@
         }
 
         /* ----- Bilbao semantic assignments (initial) ----- */
-        .bg-bilbao-50  { background-color: var(--bilbao-50); }
-        .bg-bilbao-100 { background-color: var(--bilbao-100); }
-        .bg-bilbao-200 { background-color: var(--bilbao-200); }
-        .bg-bilbao-300 { background-color: var(--bilbao-300); }
-        .bg-bilbao-400 { background-color: var(--bilbao-400); }
-        .bg-bilbao-500 { background-color: var(--bilbao-500); }
-        .bg-bilbao-600 { background-color: var(--bilbao-600); }
-        .bg-bilbao-700 { background-color: var(--bilbao-700); }
-        .bg-bilbao-800 { background-color: var(--bilbao-800); }
-        .bg-bilbao-900 { background-color: var(--bilbao-900); }
-        .bg-bilbao-950 { background-color: var(--bilbao-950); }
+        .bg-bilbao-50 {
+            background-color: var(--bilbao-50);
+        }
 
-        .text-bilbao-50  { color: var(--bilbao-50); }
-        .text-bilbao-100 { color: var(--bilbao-100); }
-        .text-bilbao-200 { color: var(--bilbao-200); }
-        .text-bilbao-300 { color: var(--bilbao-300); }
-        .text-bilbao-400 { color: var(--bilbao-400); }
-        .text-bilbao-500 { color: var(--bilbao-500); }
-        .text-bilbao-600 { color: var(--bilbao-600); }
-        .text-bilbao-700 { color: var(--bilbao-700); }
-        .text-bilbao-800 { color: var(--bilbao-800); }
-        .text-bilbao-900 { color: var(--bilbao-900); }
-        .text-bilbao-950 { color: var(--bilbao-950); }
+        .bg-bilbao-100 {
+            background-color: var(--bilbao-100);
+        }
 
-        .border-bilbao-700 { border-color: var(--bilbao-700); }
+        .bg-bilbao-200 {
+            background-color: var(--bilbao-200);
+        }
+
+        .bg-bilbao-300 {
+            background-color: var(--bilbao-300);
+        }
+
+        .bg-bilbao-400 {
+            background-color: var(--bilbao-400);
+        }
+
+        .bg-bilbao-500 {
+            background-color: var(--bilbao-500);
+        }
+
+        .bg-bilbao-600 {
+            background-color: var(--bilbao-600);
+        }
+
+        .bg-bilbao-700 {
+            background-color: var(--bilbao-700);
+        }
+
+        .bg-bilbao-800 {
+            background-color: var(--bilbao-800);
+        }
+
+        .bg-bilbao-900 {
+            background-color: var(--bilbao-900);
+        }
+
+        .bg-bilbao-950 {
+            background-color: var(--bilbao-950);
+        }
+
+        .text-bilbao-50 {
+            color: var(--bilbao-50);
+        }
+
+        .text-bilbao-100 {
+            color: var(--bilbao-100);
+        }
+
+        .text-bilbao-200 {
+            color: var(--bilbao-200);
+        }
+
+        .text-bilbao-300 {
+            color: var(--bilbao-300);
+        }
+
+        .text-bilbao-400 {
+            color: var(--bilbao-400);
+        }
+
+        .text-bilbao-500 {
+            color: var(--bilbao-500);
+        }
+
+        .text-bilbao-600 {
+            color: var(--bilbao-600);
+        }
+
+        .text-bilbao-700 {
+            color: var(--bilbao-700);
+        }
+
+        .text-bilbao-800 {
+            color: var(--bilbao-800);
+        }
+
+        .text-bilbao-900 {
+            color: var(--bilbao-900);
+        }
+
+        .text-bilbao-950 {
+            color: var(--bilbao-950);
+        }
+
+        .border-bilbao-700 {
+            border-color: var(--bilbao-700);
+        }
 
         /* -------------------------------------------------------
            GLOBAL RESET & BASE (refactored, DRY)
@@ -78,9 +145,9 @@
         }
 
         .backgroundimg {
-            background-image: linear-gradient(to bottom, 
-                black, 
-                #161616);
+            background-image: linear-gradient(to bottom,
+                    black,
+                    #161616);
             margin: 0;
         }
 
@@ -91,7 +158,10 @@
             padding: 0 20px;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-weight: 700;
             letter-spacing: -0.02em;
         }
@@ -111,12 +181,44 @@
             margin-bottom: -10px;
         }
 
-        .logox { width: 250px; height: auto; margin: auto; padding-top: 0.5rem; }
-        .imgx  { width: 280px; height: max-content; margin-bottom: -8px; }
-        .imgy  { width: 170px; height: max-content; margin-bottom: -4px; }
-        .imgz  { width: 140px; height: auto; padding: 0 2px; display: inline-flex; }
-        .imgw  { width: 130px; height: auto; padding: 0 2px; display: inline-flex; }
-        .co21  { width: 24px; height: auto; margin-bottom: -4px; }
+        .logox {
+            width: 250px;
+            height: auto;
+            margin: auto;
+            padding-top: 0.5rem;
+        }
+
+        .imgx {
+            width: 280px;
+            height: max-content;
+            margin-bottom: -8px;
+        }
+
+        .imgy {
+            width: 170px;
+            height: max-content;
+            margin-bottom: -4px;
+        }
+
+        .imgz {
+            width: 140px;
+            height: auto;
+            padding: 0 2px;
+            display: inline-flex;
+        }
+
+        .imgw {
+            width: 130px;
+            height: auto;
+            padding: 0 2px;
+            display: inline-flex;
+        }
+
+        .co21 {
+            width: 24px;
+            height: auto;
+            margin-bottom: -4px;
+        }
 
         .anchor {
             display: flex;
@@ -141,7 +243,7 @@
             letter-spacing: 0.5px;
             white-space: nowrap;
             transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-decoration: none;
             cursor: pointer;
         }
@@ -171,7 +273,9 @@
         }
 
         /* specific width variant */
-        .button-width { width: 200px; }
+        .button-width {
+            width: 200px;
+        }
 
         /* ----- hero, taglines ----- */
         .hero {
@@ -224,14 +328,17 @@
             justify-content: center;
             margin: -20px auto 40px auto;
             padding: 20px;
-            background-color: rgba(0,0,0,0.2);
+            background-color: rgba(0, 0, 0, 0.2);
         }
 
         .token-address {
             color: var(--text-light);
             text-align: center;
         }
-        .token-address:hover { color: var(--bilbao-700); }
+
+        .token-address:hover {
+            color: var(--bilbao-700);
+        }
 
         /* ----- masonry (bilbao bg applied separately in HTML) ----- */
         .bodys {
@@ -257,21 +364,26 @@
             margin-bottom: 20px;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             background-color: var(--white);
         }
+
         .masonry-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
+
         .masonry-img {
             width: 100%;
             height: auto;
             display: block;
             transition: transform 0.5s ease;
         }
-        .masonry-item:hover .masonry-img { transform: scale(1.03); }
+
+        .masonry-item:hover .masonry-img {
+            transform: scale(1.03);
+        }
 
         /* ----- section titles (bilbao) ----- */
         .section-title {
@@ -282,6 +394,7 @@
             max-width: 1200px;
             margin: 50px auto;
         }
+
         .section-title:after {
             content: '';
             position: absolute;
@@ -302,8 +415,9 @@
             min-height: 500px;
             max-width: 1200px;
             gap: 20px;
-            
+
         }
+
         .text-column {
             margin: auto;
             display: flex;
@@ -311,12 +425,14 @@
             justify-content: center;
             text-align: center;
         }
+
         .image-column {
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
         }
+
         .image-column img {
             width: 100%;
             height: 100%;
@@ -332,6 +448,7 @@
             gap: 0;
             margin: auto;
         }
+
         .aboutt-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(350px, 1fr));
@@ -339,17 +456,20 @@
             gap: 40px;
             margin: auto;
         }
+
         .card-img {
             width: 400px;
             height: 320px;
             transition: all 0.2s ease;
         }
+
         .card-img:hover {
             width: 410px;
             height: 330px;
             cursor: pointer;
             z-index: 20;
         }
+
         .about-text {
             color: var(--text-light);
             font-weight: 500;
@@ -359,8 +479,18 @@
             padding-top: 4px;
             place-items: center;
         }
-        .about-text p { font-weight: 500; padding-top: 10px; text-align: center; }
-        .about-text h3 { font-weight: 700; padding-top: 10px; text-align: center; }
+
+        .about-text p {
+            font-weight: 500;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        .about-text h3 {
+            font-weight: 700;
+            padding-top: 10px;
+            text-align: center;
+        }
 
         /* ----- mission (bilbao) ----- */
         .mission {
@@ -368,7 +498,12 @@
             margin: 100px auto;
             text-align: center;
         }
-        .mission h2 { color: var(--bilbao-700); margin-bottom: 30px; }
+
+        .mission h2 {
+            color: var(--bilbao-700);
+            margin-bottom: 30px;
+        }
+
         .mission-statement {
             font-size: 20px;
             max-width: 900px;
@@ -376,6 +511,7 @@
             font-weight: 500;
             color: var(--text-light);
         }
+
         .mission-highlight {
             background-color: var(--bilbao-700);
             color: #f0f0f0;
@@ -383,7 +519,7 @@
             border-radius: 10px;
             max-width: 800px;
             margin: 0 auto;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         /* features */
@@ -392,15 +528,21 @@
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 30px;
         }
+
         .feature-card {
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             text-align: center;
             border-top: 5px solid var(--bilbao-700);
-            background-color: rgba(255,255,255,0.05);
+            background-color: rgba(255, 255, 255, 0.05);
         }
-        .feature-card h3 { color: var(--bilbao-700); margin-bottom: 15px; font-size: 24px; }
+
+        .feature-card h3 {
+            color: var(--bilbao-700);
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
 
         /* ----- contact form (bilbao) ----- */
         .contact-container {
@@ -409,19 +551,25 @@
             gap: 40px;
             max-width: 1200px;
         }
+
         .contact-form {
             background-color: transparent;
-            max-width: 320px;
+            max-width: 420px;
+            display: relative;
+            place-items: center;
         }
+
         .form-group {
             margin-bottom: 20px;
         }
+
         .form-group label {
             display: block;
             margin-bottom: 8px;
             color: var(--bilbao-700);
             font-weight: 500;
         }
+
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -433,11 +581,13 @@
             transition: border 0.3s;
             color: var(--text-light);
         }
+
         .form-group input:focus,
         .form-group textarea:focus {
             border-color: var(--bilbao-700);
             outline: none;
         }
+
         .file-upload {
             padding: 10px;
             border: 2px dashed #ddd;
@@ -446,7 +596,10 @@
             cursor: pointer;
             transition: border 0.3s;
         }
-        .file-upload:hover { border-color: var(--bilbao-700); }
+
+        .file-upload:hover {
+            border-color: var(--bilbao-700);
+        }
 
         .submit-btn {
             background-color: var(--bilbao-700);
@@ -460,18 +613,27 @@
             width: 100%;
             font-weight: 600;
         }
-        .submit-btn:hover { background-color: var(--bilbao-800); }
+
+        .submit-btn:hover {
+            background-color: var(--bilbao-800);
+        }
 
         .info-card {
             background-color: transparent;
             padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             margin-bottom: 25px;
             text-align: start;
             margin-top: -10px;
         }
-        .info-card h3 { color: #f0f0f0; margin-bottom: 2px; font-size: 22px; }
+
+        .info-card h3 {
+            color: #f0f0f0;
+            margin-bottom: 2px;
+            font-size: 22px;
+        }
+
         .hours-table {
             width: 100%;
             margin-top: 1px;
@@ -480,11 +642,31 @@
         }
 
         /* links with bilbao */
-        .info-a { color: var(--bilbao-700); float: inline-start; }
-        .info-c { color: rgba(10, 143, 62, 0.5); float: inline-start; font-size: larger; }
-        .info-b { color: var(--bilbao-200); display: inline-flex; }
-        .info-a:hover, .info-b:hover { background-color: transparent; color: #966395 !important; }
-        .info-c:hover { color: var(--bilbao-700); }
+        .info-a {
+            color: var(--bilbao-700);
+            float: inline-start;
+        }
+
+        .info-c {
+            color: rgba(10, 143, 62, 0.5);
+            float: inline-start;
+            font-size: larger;
+        }
+
+        .info-b {
+            color: var(--bilbao-200);
+            display: inline-flex;
+        }
+
+        .info-a:hover,
+        .info-b:hover {
+            background-color: transparent;
+            color: #966395 !important;
+        }
+
+        .info-c:hover {
+            color: var(--bilbao-700);
+        }
 
         .contact-mailto {
             display: flex;
@@ -501,6 +683,7 @@
             -webkit-text-fill-color: transparent;
             display: inline-block;
         }
+
         .text-gradient:hover {
             background-image: linear-gradient(45deg, #BAF567, #9EF345 50%, #3AC178 100%);
         }
@@ -512,32 +695,49 @@
             padding: 20px;
             margin-top: 0px;
         }
+
         .footer .social-links a {
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             color: var(--white);
             transition: background-color 0.3s;
         }
-        .footer .social-links a:hover { background-color: var(--bilbao-800); }
+
+        .footer .social-links a:hover {
+            background-color: var(--bilbao-800);
+        }
+
         .cta-tel-2 {
-            color: rgb(145,145,145);
+            color: rgb(145, 145, 145);
             text-align: center;
             font-size: 16px;
             padding: 20px;
             width: 70%;
             margin: auto;
         }
-        .social-links{
+
+        .social-links {
             margin: auto;
             padding: 20px 0;
         }
-        .socials{
+
+        .socials {
             margin-left: 4px;
             padding: 10px;
         }
-        .co222 { text-decoration: none; }
-        .co2221 { text-decoration: none; padding-top: 2px; }
-        .co222:hover { background-color: #BAF567aa; }
+
+        .co222 {
+            text-decoration: none;
+        }
+
+        .co2221 {
+            text-decoration: none;
+            padding-top: 2px;
+        }
+
+        .co222:hover {
+            background-color: #BAF567aa;
+        }
 
         .inline-signup-form {
             display: inline-flex;
@@ -546,6 +746,7 @@
             height: 80px;
             align-items: center;
         }
+
         .inline-signup-form input {
             height: 60px;
             width: 400px;
@@ -560,57 +761,185 @@
            FULLY REFACTORED MEDIA QUERIES (consolidated, bilbao)
            ------------------------------------------------------- */
         @media (max-width: 1024px) {
-            .about-grid { grid-template-columns: repeat(3, minmax(300px, 1fr)); }
-            .aboutt-grid { grid-template-columns: repeat(3, minmax(300px, 1fr)); }
-            .card-img { width: 300px; height: 240px; }
-            .card-img:hover { width: 310px; height: 250px; }
+            .about-grid {
+                grid-template-columns: repeat(3, minmax(300px, 1fr));
+            }
+
+            .aboutt-grid {
+                grid-template-columns: repeat(3, minmax(300px, 1fr));
+            }
+
+            .card-img {
+                width: 300px;
+                height: 240px;
+            }
+
+            .card-img:hover {
+                width: 310px;
+                height: 250px;
+            }
         }
 
         @media (max-width: 992px) {
-            .masonry-grid { columns: 3; }
-            h1 { font-size: 2.2rem; }
-            .hero-tagline { font-size: 28px; }
-            .hero-tag { font-size: 20px; }
+            .masonry-grid {
+                columns: 3;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-tagline {
+                font-size: 28px;
+            }
+
+            .hero-tag {
+                font-size: 20px;
+            }
         }
 
         @media (max-width: 768px) {
-            .masonry-grid { columns: 2; }
-            .info-card h3 { text-align: center; }
-             h1 { font-size: 2rem; }
-            .grid-row { grid-template-columns: 1fr; }
-            .hero-tagline { font-size: 32px; white-space: normal; }
-            .hero-tag { font-size: 18px; width: 90%; }
-            .btn { white-space: normal; padding: 12px 24px; }
-            .button-width { width: 100%; }
-            .about-grid, .aboutt-grid { grid-template-columns: repeat(2, 1fr); }
-            .card-img { width: 250px; height: 200px; }
-            .card-img:hover { width: 260px; height: 210px; }
-            .contact-mailto { justify-content: center; padding-left: 0; }
-            .hours-table { width: auto; margin: auto; display: table; }
-            .inline-signup-form { flex-direction: column; height: auto; }
-            .inline-signup-form input { width: 400px; max-width: 90%; height: 50px; }
-            .section-title { font-size: 30px; }
-            .hero-image-container { padding-bottom: 20px; }
+            .masonry-grid {
+                columns: 2;
+            }
+
+            .info-card h3 {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .grid-row {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-tagline {
+                font-size: 32px;
+                white-space: normal;
+            }
+
+            .hero-tag {
+                font-size: 18px;
+                width: 90%;
+            }
+
+            .btn {
+                white-space: normal;
+                padding: 12px 24px;
+            }
+
+            .button-width {
+                width: 100%;
+            }
+
+            .about-grid,
+            .aboutt-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .card-img {
+                width: 250px;
+                height: 200px;
+            }
+
+            .card-img:hover {
+                width: 260px;
+                height: 210px;
+            }
+
+            .contact-mailto {
+                justify-content: center;
+                padding-left: 0;
+            }
+
+            .hours-table {
+                width: auto;
+                margin: auto;
+                display: table;
+            }
+
+            .inline-signup-form {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .inline-signup-form input {
+                width: 400px;
+                max-width: 90%;
+                height: 50px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .hero-image-container {
+                padding-bottom: 20px;
+            }
         }
 
         @media (max-width: 576px) {
-            .masonry-grid { columns: 1; }
-            h1 { font-size: 1.8rem; }
-            .anchor { flex-direction: column; align-items: center; }
-            .about-grid, .aboutt-grid { grid-template-columns: 1fr; }
-            .hero-tagline { font-size: 24px; }
-            .hero-tag { font-size: 16px; width: 95%; }
-            .btn { width: 100%; }
+            .masonry-grid {
+                columns: 1;
+            }
 
-            .inline-signup-form input { max-width: 280px; }
-            .cta-tel-2 { width: 100%; font-size: 14px; }
-            .logox { width: 220px; }
-            .token-address {text-align: center; font-size: small; }
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .anchor {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-grid,
+            .aboutt-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-tagline {
+                font-size: 24px;
+            }
+
+            .hero-tag {
+                font-size: 16px;
+                width: 95%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .inline-signup-form input {
+                max-width: 280px;
+            }
+
+            .cta-tel-2 {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            .logox {
+                width: 220px;
+            }
+
+            .token-address {
+                text-align: center;
+                font-size: small;
+            }
         }
 
         @media (max-width: 375px) {
-            .hero-tagline { font-size: 20px; }
-            .btn { font-size: 12px; padding: 10px 16px; }
+            .hero-tagline {
+                font-size: 20px;
+            }
+
+            .btn {
+                font-size: 12px;
+                padding: 10px 16px;
+            }
         }
 
         /* touch optimization */
@@ -620,44 +949,250 @@
                 color: var(--white) !important;
                 transform: none;
             }
-            .card-img:hover { transform: none; width: 100%; height: auto; }
+
+            .card-img:hover {
+                transform: none;
+                width: 100%;
+                height: auto;
+            }
         }
 
         /* preserve desktop & existing background classes */
-        .bg-bilbao-800 { background-color: var(--bilbao-800); }
-        .text-bilbao-800 { color: var(--bilbao-800); }
+        .bg-bilbao-800 {
+            background-color: var(--bilbao-800);
+        }
+
+        .text-bilbao-800 {
+            color: var(--bilbao-800);
+        }
+
+
+        /* main grid container: 3 columns, 2 rows → exactly 3 above + 3 below */
+        .grid-six {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* three equal columns */
+            gap: 0rem;
+            /* breathing space between cards */
+            max-width: 100%;
+            margin: 0 auto;
+            place-items: center;
+        }
+
+        .grid-two {
+            display: flex;
+            gap: 0rem;
+            /* breathing space between cards */
+            max-width: 100%;
+            margin: 0 auto;
+            place-items: center;
+            justify-content: space-around;
+            width: screen;
+        }
+        .grid-two img{
+            width: 200px;
+
+        }
+
+        /* every element gets a consistent card look */
+        .grid-item {
+            backdrop-filter: blur(2px);
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.25s ease;
+            font-size: 1.3rem;
+            letter-spacing: 0.01em;
+            box-decoration-break: clone;
+            width: 1/3;
+            
+        }
+
+        .grid-item img{
+            width: 100%;
+            height: 65px;
+        }
+
+        /* subtle hover – friendly & responsive (no layout shift) */
+        .grid-item:hover {
+            transform: scale(1.02) translateY(-4px);
+        }
+
+
+
+        /* tablet / small laptop → keep 3 columns unless width < 780px */
+        @media screen and (max-width: 780px) {
+            .grid-six {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* three equal columns */
+            gap: 0rem;
+            /* breathing space between cards */
+            max-width: 100%;
+            margin: 20px auto;
+            place-items: center;
+        }
+
+            .grid-item {
+                height: 60px;
+                width: 100%;
+                font-size: 1.2rem;
+                border-radius: 1.6rem;
+                margin: 10px auto;
+            }
+
+            .grid-item img{
+            width: 100%;
+            height: 60px;
+        }
+        }
+
+         /* tablet / small laptop → keep 3 columns unless width < 780px */
+        @media (min-width: 500px)and (max-width: 780px) {
+           
+
+            .grid-item {
+                height: 50px;
+                width: 100%;
+                font-size: 1.2rem;
+                border-radius: 1.6rem;
+                margin: 10px auto;
+            }
+
+            .grid-item img{
+            width: 100%;
+            height: 50px;
+        }
+        }
+
+        /* mobile phones – single column, smooth stack */
+        @media screen and (max-width: 500px) {
+            .grid-six {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* three equal columns */
+            gap: 0rem;
+            /* breathing space between cards */
+            width: 100%;
+            margin: 0 auto;
+            place-items: center;
+        }
+
+            .grid-item {
+                width: 100%;
+                height: 20px;
+                font-size: 1.2rem;
+                border-radius: 1.8rem;
+                backdrop-filter: none;
+                /* lighter on mobile */
+            }
+
+            .grid-item img {
+                width: 100%;
+                height: 30px;
+                font-size: 1.2rem;
+                border-radius: 1.8rem;
+                backdrop-filter: none;
+                /* lighter on mobile */
+            }
+        }
+
+        /* extra large screens: the gap grows a tiny bit */
+        @media screen and (min-width: 1400px) {
+            
+            .grid-item {
+                font-size: 1.5rem;
+            }
+        }
+
+
+
+        /* remove pseudo on very small screens to keep clean look (optional) */
+        @media screen and (max-width: 400px) {
+            .grid-item::before {
+                display: none;
+            }
+        }
+
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <section class="hero " id="home">
         <header>
             <div class="logo-container">
                 <a class="logo" href="/">
-                    <img style="width: 250px;" src="gallery/Transparent.gif" alt="logo">
+                    <img style="width: 280px;" src="gallery/Transparent2.gif" alt="logo">
                 </a>
             </div>
-            <p style=" justify-content: center; padding-bottom: 40px; 
+            <!-- <p style=" justify-content: center; padding-bottom: 40px; 
                 font-size: 24px; ;margin: -35px auto 0 auto; font-weight: 600;
                 max-width: fit-content; ">
                 <span>
                     <img class="logox" src="gallery/Support.svg" alt="logo">
                 </span>
-            </p>
+            </p>-->
+
         </header>
 
         <!-- Hero Section with Bilbao token box -->
-        <div class="container" style="padding: 40px;">
+        <div class="container" style="padding: 4px 40px;">
             <div class="rounded-box border-bilbao-700" style="border-color: var(--bilbao-300);">
-                <p style="display: flex; justify-content: center; margin-bottom: -5px; color: var(--bilbao-100);">
+                <p style="display: flex; justify-content: center; margin-top: -5px; color: var(--bilbao-100);">
                     Token Address:
                 </p>
                 <p style="white-space: nowrap;">
-                    <a class="token-address text-bilbao-200" href="https://xpmarket.com/token/XRG-rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp">
+                    <a class="token-address text-bilbao-200"
+                        href="https://xpmarket.com/token/XRG-rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp">
                         rNqb5BzLoR1NENpKBnrDsgLvP5C9SMbwUp
                     </a>
                 </p>
             </div>
+            <section style="margin: 20px auto; 
+            width: 85%; border-radius: 2rem; padding: 10px 0;">
+                <div class="grid-six" >
+
+                    <div class="grid-item" data-label="Apple Pay">
+                        <a href="https://www.apple.com/apple-pay/">
+                            <img src="images/Apay_w-01.svg">
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item" data-label="XRP">
+                        <a href="https://xpmarket.com/amm/pool/CO2-rNqb5BzLoR1NENpKBnrDsgLvP5C9SMbwUp/XRP">
+                          <img src="images/XRP_w-01.svg">  
+                        </a>
+                        
+                    </div>
+                    
+                    
+                    <div class="grid-item" data-label="VISA">
+                        <a href="https://www.visa.com/en-us">
+                            <img src="images/visa_w-01.svg">
+                        </a>
+                    </div>
+                    <div class="grid-item" data-label="Google Pay">
+                       <a href="https://pay.google.com/">
+                        <img src="images/Gpay_w-01.svg">
+                       </a> 
+                    </div>
+                    <div class="grid-item" data-label="RLUSD">
+                        <a href="https://xpmarket.com/amm/pool/CO2-rNqb5BzLoR1NENpKBnrDsgLvP5C9SMbwUp/RLUSD-rMxCKbEDwqr76QuheSUMdEGf4B9xJ8m5De">
+                            <img src="images/RLUSD_w-01.svg">
+                        </a>
+                    </div>
+                    <div class="grid-item" data-label="Master Card">
+                        <a href="https://www.mastercard.com/global/en.html">
+                            <img src="images/mastercard_w-01.svg">
+                        </a>
+                    </div>
+
+                </div>
+
+            </section>
             <h1 class="text-bilbao-50">
                 Join the Movement to Save the Planet with
                 <br>CO2.Support (CO2)
@@ -685,6 +1220,29 @@
                 БЕЛАЯ БУМАГА (РУ)
             </a>
         </div>
+
+        <section style="margin: 20px auto; width: 100%;">
+                <div class="grid-two" >
+
+                    
+                    <div class="grid-item" data-label="XRP">
+                       <a href="https://apps.apple.com/">
+                        <img src="images/AppStore_w-01.svg">
+                    </a> 
+                       
+                    </div>
+                    
+                    <div class="grid-item" data-label="Apple Pay">
+                       <a href="https://store.google.com/">
+                        <img src="gallery/Gplay_w-01.svg">
+                    </a> 
+                    </div>
+                    
+                    
+
+                </div>
+
+            </section>
     </section>
 
     <!-- image section -->
@@ -697,13 +1255,13 @@
     </div>
 
     <!-- About CO2 -->
-    <div style="margin-top: 30px; padding: 30px;">
+    <div class="container" style="margin: 30px auto; padding-left: 20px; max-width: 1200px; ">
         <h2 style="text-align: center; color: var(--bilbao-300);">
             About CO2.Support (CO2)
         </h2>
-        <section class="container grid-row " style="padding-right: 40px 40px 40px 0;">
-            <div class="image-column" >
-                <img src="gallery/about.webp" style="height: 70% ; width: 100%;" alt="About CO2.Support">
+        <section class=" grid-row " style="padding: 40px 0 40px 0; margin: auto;">
+            <div class="image-column about-img" >
+                <img src="gallery/about.webp" alt="About CO2.Support">
             </div>
             <div class="text-column">
                 <h2 class="text-bilbao-200">Our Mission</h2>
@@ -723,7 +1281,7 @@
     </a>
 
     <!-- Features / Gallery section – Bilbao background applied -->
-    <div class="container bodys" style="background-color: var(--bilbao-800); padding: 20px 10px;">
+    <div class="container bodys" style="background-color: var(--bilbao-800); padding: 20px;">
         <h1 class="text-bilbao-100">
             Green Scenes: A Photo Gallery of Our Environmental and Ecological Projects
         </h1>
@@ -738,7 +1296,7 @@
         </div>
     </div>
 
-    
+
     <!-- grid row with bilbao text -->
     <section class="container grid-row backgroundimg" style="padding: 20px;">
         <div class="image-column">
@@ -746,9 +1304,9 @@
         </div>
         <div class="text-column">
             <h2><img class="imgy" src="gallery/Support_1-01.svg" alt="CO2 Support logo"></h2>
-            <p class="text-bilbao-100">is the first green token, on the XRP Ledger (XRPL) 
-                based on the <img class="imgy" src="gallery/XGreen_Energy.svg" 
-                alt="XGreen Energy logo"> economy, a pioneer in tokenizing the benefits of 
+            <p class="text-bilbao-100">is the first green token, on the XRP Ledger (XRPL)
+                based on the <img class="imgy" src="gallery/XGreen_Energy.svg" alt="XGreen Energy logo"> economy, a
+                pioneer in tokenizing the benefits of
                 reducing carbon emissions compliant with the ISO 20022.
             </p>
         </div>
@@ -757,11 +1315,14 @@
             <p class="text-bilbao-50">Connecting virtual reality (gameplay) with the real world</p>
         </div>
         <div class="image-column video-vimeo">
-            <div style="position:relative; width:100%; max-width: 100vw; height: 240px; display: flex; align-items: center;">
-                <iframe src="https://player.vimeo.com/video/1155431266?badge=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    style="width:100%;height:300px;" title="green island CO2.Support (CO2)"></iframe>
+            <div
+                style="position:relative; width:100%; max-width: 100vw; height: 240px; display: flex; align-items: center;">
+                <iframe
+                    src="https://player.vimeo.com/video/1155431266?badge=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" style="width:100%;height:300px;"
+                    title="green island CO2.Support (CO2)"></iframe>
             </div>
         </div>
     </section>
@@ -781,7 +1342,8 @@
                         <input type="email" id="email" name="email" placeholder="Email" required class="text-bilbao-50">
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Message" rows="5" required class="text-bilbao-50"></textarea>
+                        <textarea id="message" name="message" placeholder="Message" rows="5" required
+                            class="text-bilbao-50"></textarea>
                     </div>
                     <div class="form-group" style="display: inline-flex; justify-content: space-between; width: 100%;">
                         <label class="info-a"><i class="fa-solid fa-paperclip"></i>Attach Files</label>
@@ -796,9 +1358,10 @@
                     </button>
                 </form>
                 <p style="font-size: small; padding-top: 8px; color: var(--bilbao-100);">
-                    This site is protected by reCAPTCHA and the Google 
+                    This site is protected by reCAPTCHA and the Google
                     <a class="info-b text-bilbao-300" href="https://policies.google.com/privacy">Policy</a> and
-                    <a class="info-b text-bilbao-300" href="https://policies.google.com/terms">Terms of Service</a> apply.
+                    <a class="info-b text-bilbao-300" href="https://policies.google.com/terms">Terms of Service</a>
+                    apply.
                 </p>
             </div>
             <!-- Contact Info with Bilbao -->
@@ -818,13 +1381,34 @@
                 <div class="info-card">
                     <h3 style="margin-top: 40px; color: var(--bilbao-200);">Business Hours</h3>
                     <table class="hours-table text-bilbao-100">
-                        <tr><td>Mon</td><td>05:00 am – 08:00 am</td></tr>
-                        <tr><td>Tue</td><td>05:00 am – 08:00 am</td></tr>
-                        <tr><td>Wed</td><td>05:00 am – 08:00 am</td></tr>
-                        <tr><td>Thu</td><td>By Appointment</td></tr>
-                        <tr><td>Fri</td><td>05:00 am – 08:00 am</td></tr>
-                        <tr><td>Sat</td><td>05:00 am – 08:00 am</td></tr>
-                        <tr><td>Sun</td><td>05:00 am – 09:00 am</td></tr>
+                        <tr>
+                            <td>Mon</td>
+                            <td>05:00 am – 08:00 am</td>
+                        </tr>
+                        <tr>
+                            <td>Tue</td>
+                            <td>05:00 am – 08:00 am</td>
+                        </tr>
+                        <tr>
+                            <td>Wed</td>
+                            <td>05:00 am – 08:00 am</td>
+                        </tr>
+                        <tr>
+                            <td>Thu</td>
+                            <td>By Appointment</td>
+                        </tr>
+                        <tr>
+                            <td>Fri</td>
+                            <td>05:00 am – 08:00 am</td>
+                        </tr>
+                        <tr>
+                            <td>Sat</td>
+                            <td>05:00 am – 08:00 am</td>
+                        </tr>
+                        <tr>
+                            <td>Sun</td>
+                            <td>05:00 am – 09:00 am</td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -847,17 +1431,22 @@
             </p>
 
             <div class="social-links">
-                <a class="socials" href="https://discord.com/users/1319212969455910954"><i class="fa-brands fa-discord"></i></a>
-                <a class="socials" href="https://www.instagram.com/xgreen.energy"><i class="fa-brands fa-instagram"></i></a>
-                <a class="socials" href="https://x.com/co2_support" class="x-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                <a class="socials" href="https://discord.com/users/1319212969455910954"><i
+                        class="fa-brands fa-discord"></i></a>
+                <a class="socials" href="https://www.instagram.com/xgreen.energy"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a class="socials" href="https://x.com/co2_support" class="x-icon"><i
+                        class="fa-brands fa-x-twitter"></i></a>
                 <a class="socials" href="https://www.tiktok.com/@xgreen.energy"><i class="fa-brands fa-tiktok"></i></a>
-                <a class="socials" href="https://www.youtube.com/@xGreen.Energy"><i class="fa-brands fa-youtube"></i></a>
+                <a class="socials" href="https://www.youtube.com/@xGreen.Energy"><i
+                        class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
 
         <section style="margin: auto; place-items: center; display: block;">
             <div style="display:block; margin: auto; align-items: center;" class="copyright">
-                <p class="text-bilbao-100 " style="text-align: center; font-size: small; margin-left: -18px; ">Copyright &copy; 2025</p>
+                <p class="text-bilbao-100 " style="text-align: center; font-size: small; margin-left: -18px; ">Copyright
+                    &copy; 2025</p>
                 <p style="display: inline-flex; padding: 3px;">
                     <a class="co222 co2221" href="https://xgreen.energy/">
                         <img class="imgz" src="gallery/XGreen_Energy.svg" alt="XGreen Energy logo">
@@ -868,7 +1457,8 @@
                     </a>
                 </p>
             </div>
-            <p class="copyright text-bilbao-50" style="display: block; margin: auto ; font-size: small; padding-left: 16px; padding-bottom: 10px;">
+            <p class="copyright text-bilbao-50"
+                style="display: block; margin: auto ; font-size: small; padding-left: 16px; padding-bottom: 10px;">
                 All Rights Reserved.
             </p>
             <p class="copyright" style="margin:0 auto 0 auto; font-size: small; padding-left: 20px;">
@@ -880,4 +1470,5 @@
 
     <script src="https://player.vimeo.com/api/player.js"></script>
 </body>
+
 </html>
