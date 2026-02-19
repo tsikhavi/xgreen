@@ -29,7 +29,8 @@
             overflow-x: hidden;
             padding: 0;
         }
- /* main grid container: 3 columns, 2 rows → exactly 3 above + 3 below */
+
+        /* main grid container: 3 columns, 2 rows → exactly 3 above + 3 below */
         .grid-six {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -42,18 +43,19 @@
         }
 
         .grid-two {
-            display: flex;
+            display: grid;
             gap: 0rem;
+            grid-template-columns: repeat(2, 1fr);
             /* breathing space between cards */
-            max-width: 100%;
+            max-width: 100vw;
             margin: 0 auto;
             place-items: center;
-            justify-content: space-around;
-            width: screen;
-        }
-        .grid-two img{
-            width: 200px;
+            width: 80vw;
 
+        }
+
+        .grid-item2 {
+            width: 40vw;
         }
 
         /* every element gets a consistent card look */
@@ -69,10 +71,10 @@
             letter-spacing: 0.01em;
             box-decoration-break: clone;
             width: 1/3;
-            
+
         }
 
-        .grid-item img{
+        .grid-item img {
             width: 100%;
             height: 65px;
         }
@@ -87,15 +89,37 @@
         /* tablet / small laptop → keep 3 columns unless width < 780px */
         @media screen and (max-width: 780px) {
             .grid-six {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            /* three equal columns */
-            gap: 0rem;
-            /* breathing space between cards */
-            max-width: 100%;
-            margin: 20px auto;
-            place-items: center;
-        }
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                /* three equal columns */
+                gap: 0rem;
+                /* breathing space between cards */
+                max-width: 100%;
+                margin: 20px auto;
+                place-items: center;
+            }
+
+            .grid-two {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                /* three equal columns */
+                gap: 0rem;
+                /* breathing space between cards */
+                width: 100%;
+                margin: auto;
+                place-items: center;
+            }
+
+            .grid-two img {
+                width: 100%;
+
+            }
+
+            .grid-item2 {
+                width: 90vw;
+
+
+            }
 
             .grid-item {
                 height: 60px;
@@ -105,15 +129,15 @@
                 margin: 10px auto;
             }
 
-            .grid-item img{
-            width: 100%;
-            height: 60px;
-        }
+            .grid-item img {
+                width: 100%;
+                height: 60px;
+            }
         }
 
-         /* tablet / small laptop → keep 3 columns unless width < 780px */
+        /* tablet / small laptop → keep 3 columns unless width < 780px */
         @media (min-width: 500px)and (max-width: 780px) {
-           
+
 
             .grid-item {
                 height: 50px;
@@ -123,24 +147,24 @@
                 margin: 10px auto;
             }
 
-            .grid-item img{
-            width: 100%;
-            height: 50px;
-        }
+            .grid-item img {
+                width: 100%;
+                height: 50px;
+            }
         }
 
         /* mobile phones – single column, smooth stack */
         @media screen and (max-width: 500px) {
             .grid-six {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            /* three equal columns */
-            gap: 0rem;
-            /* breathing space between cards */
-            width: 100%;
-            margin: 0 auto;
-            place-items: center;
-        }
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                /* three equal columns */
+                gap: 0rem;
+                /* breathing space between cards */
+                width: 100%;
+                margin: 0 auto;
+                place-items: center;
+            }
 
             .grid-item {
                 width: 100%;
@@ -163,7 +187,7 @@
 
         /* extra large screens: the gap grows a tiny bit */
         @media screen and (min-width: 1400px) {
-            
+
             .grid-item {
                 font-size: 1.5rem;
             }
@@ -178,9 +202,9 @@
             }
         }
 
-    
 
-       
+
+
 
 
         .container {
@@ -225,21 +249,22 @@
             text-decoration: none;
             padding-top: 2px;
         }
+
         .co222:hover {
             background-color: #BAF567aa;
         }
 
         .imgz {
-            width: 160px; 
-            height: auto; 
-            padding: 0 2px; 
+            width: 160px;
+            height: auto;
+            padding: 0 2px;
             display: inline-flex;
         }
 
         .imgw {
             width: 140px;
-            height: auto; 
-            padding: 0 2px; 
+            height: auto;
+            padding: 0 2px;
             display: inline-flex;
         }
 
@@ -312,6 +337,7 @@
 
         .button-width {
             width: 200px;
+            height: 50px;
         }
 
         /* Purple Whitepaper Button */
@@ -501,7 +527,7 @@
             height: auto;
             border-radius: 50%;
             margin: 20px auto;
-            display: flex; 
+            display: flex;
             place-content: center;
         }
 
@@ -530,6 +556,7 @@
             padding-top: 10px;
             text-align: center;
         }
+
         /* Mission Section */
         .mission-grid {
             display: grid;
@@ -705,16 +732,17 @@
             margin-bottom: 2px;
             font-size: 22px;
         }
+
         .grid-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             min-height: 500px;
-            max-width: 1160px; 
-            gap: 20px; 
-          
+            max-width: 1160px;
+            gap: 20px;
+
         }
-         
-   
+
+
 
         .hours-table {
             width: 100%;
@@ -852,6 +880,7 @@
         .telegram-cta a:hover {
             text-decoration: underline;
         }
+
         .text-column {
             margin: auto;
             display: flex;
@@ -859,19 +888,21 @@
             justify-content: center;
             text-align: center;
         }
-.image-column {
+
+        .image-column {
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
         }
-        
+
         .image-column img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
+
         .cookie-notice {
             background-color: rgba(0, 0, 0, 0.2);
             padding: 15px;
@@ -910,41 +941,97 @@
 
         @media (max-width: 768px) {
 
-             .grid-row {
+            .grid-row {
                 grid-template-columns: 1fr;
                 gap: 25px;
             }
-            
+
             /* Reorder grid items for mobile */
-            .grid-row > *:nth-child(1) { order: 1; } /* Image */
-            .grid-row > *:nth-child(2) { order: 2; } /* Text about XRG */
-            .grid-row > *:nth-child(3) { order: 3; } /* Text about connecting worlds */
-            .grid-row > *:nth-child(4) { order: 4; } /* Video */
-            .grid-row > *:nth-child(5) { order: 5; } /* Image */
-            .grid-row > *:nth-child(6) { order: 6; } /* Text about assets */
-            .grid-row > *:nth-child(7) { order: 7; } /* Text about energy */
-            .grid-row > *:nth-child(8) { order: 8; } /* Image */
-            
+            .grid-row>*:nth-child(1) {
+                order: 1;
+            }
+
+            /* Image */
+            .grid-row>*:nth-child(2) {
+                order: 2;
+            }
+
+            /* Text about XRG */
+            .grid-row>*:nth-child(3) {
+                order: 3;
+            }
+
+            /* Text about connecting worlds */
+            .grid-row>*:nth-child(4) {
+                order: 4;
+            }
+
+            /* Video */
+            .grid-row>*:nth-child(5) {
+                order: 5;
+            }
+
+            /* Image */
+            .grid-row>*:nth-child(6) {
+                order: 6;
+            }
+
+            /* Text about assets */
+            .grid-row>*:nth-child(7) {
+                order: 7;
+            }
+
+            /* Text about energy */
+            .grid-row>*:nth-child(8) {
+                order: 8;
+            }
+
+            /* Image */
+
             /* Specifically for the video section - text comes first */
-           .grid-row > *:nth-child(2) { order: 1; } /* Text about XRG */
-           .grid-row > *:nth-child(1) { order: 2; } /* Image */
-            .grid-row > *:nth-child(3) { order: 3; } /* Text "Connect the two worlds" */
-            .grid-row > *:nth-child(4) { order: 4; } /* Video */
-            .grid-row > *:nth-child(6) { order: 5; } /* Text about assets */
-            .grid-row > *:nth-child(5) { order: 6; } /* Image */
+            .grid-row>*:nth-child(2) {
+                order: 1;
+            }
+
+            /* Text about XRG */
+            .grid-row>*:nth-child(1) {
+                order: 2;
+            }
+
+            /* Image */
+            .grid-row>*:nth-child(3) {
+                order: 3;
+            }
+
+            /* Text "Connect the two worlds" */
+            .grid-row>*:nth-child(4) {
+                order: 4;
+            }
+
+            /* Video */
+            .grid-row>*:nth-child(6) {
+                order: 5;
+            }
+
+            /* Text about assets */
+            .grid-row>*:nth-child(5) {
+                order: 6;
+            }
+
+            /* Image */
 
             .image-column {
                 min-height: 300px;
             }
-            
+
             .text-column {
                 padding: 30px 20px;
             }
-            
+
             .text-column h2 {
                 font-size: 1.6rem;
             }
-      
+
             .hours-table {
                 width: 250px;
                 margin: auto;
@@ -1001,9 +1088,10 @@
                 margin-bottom: -6px;
             }
 
-            .video-vimeo{
+            .video-vimeo {
                 margin-top: -40px;
             }
+
             .anchor {
                 flex-direction: column;
             }
@@ -1706,10 +1794,10 @@
                 </a>
             </div>
             <p style=" justify-content: center; padding-bottom: 40px; 
-                font-size: 24px; ;margin: -35px auto 0 auto; font-weight: 600;
+                font-size: 24px; ;margin: -15px auto 0 auto; font-weight: 600;
                 max-width: fit-content; ">
                 <span>
-                    <img class="logox" src="images/XGreen_Energy.svg" alt="logo">
+                    <img class="logox" src="images/XGreen_Energy_-01.svg" alt="logo">
                 </span>
             </p>
         </header>
@@ -1728,47 +1816,35 @@
             </div>
             <section style="margin: 20px auto; 
             width: 85%; border-radius: 2rem; padding: 10px 0;">
-                <div class="grid-six" >
+                <div class="grid-six">
 
                     <div class="grid-item" data-label="Apple Pay">
-                        <a class="co222" href="https://www.apple.com/apple-pay/">
-                            <img src="images/Apay_w-01.svg">
+                        <a href="https://www.apple.com/apple-pay/">
+                            <img src="gallery/Apay_w-01.svg">
                         </a>
-                    </div>
-                    
-                    <div class="grid-item" data-label="XRP">
-                        <a class="co222" href="https://xpmarket.com/amm/pool/CO2-rNqb5BzLoR1NENpKBnrDsgLvP5C9SMbwUp/XRP">
-                          <img src="images/XRP_w-01.svg">  
-                        </a>
-                        
-                    </div>
-                    
-                    
-                    <div class="grid-item" data-label="VISA">
-                        <a class="co222" href="https://www.visa.com/en-us">
-                            <img src="images/visa_w-01.svg">
-                        </a>
-                    </div>
-                    <div class="grid-item" data-label="Google Pay">
-                       <a class="co222" href="https://pay.google.com/">
-                        <img src="images/Gpay_w-01.svg">
-                       </a> 
                     </div>
                     <div class="grid-item" data-label="RLUSD">
-                        <a class="co222" href="https://xpmarket.com/amm/pool/CO2-rNqb5BzLoR1NENpKBnrDsgLvP5C9SMbwUp/RLUSD-rMxCKbEDwqr76QuheSUMdEGf4B9xJ8m5De">
+                        <a
+                            href="https://xpmarket.com/amm/pool/XRG-rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp/RLUSD-rMxCKbEDwqr76QuheSUMdEGf4B9xJ8m5De">
                             <img src="images/RLUSD_w-01.svg">
                         </a>
                     </div>
-                    <div class="grid-item" data-label="Master Card">
-                        <a class="co222" href="https://www.mastercard.com/global/en.html">
-                            <img src="images/mastercard_w-01.svg">
+                    <div class="grid-item" data-label="XRP">
+                        <a href="https://xpmarket.com/amm/pool/XRG-rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp/XRP">
+                            <img src="gallery/XRP_w-01.svg">
                         </a>
+
                     </div>
+
+
+
+
+
 
                 </div>
 
             </section>
-           
+
             <h1>
                 <img class="imgx" style=" margin-top: 60px; " src="images/XGreen_Energy_-01.svg" alt="logox">
                 - The first tokenized green
@@ -1805,29 +1881,28 @@
             </a>
         </div>
 
-        <section style="margin: 20px auto; width: 100%;">
-                <div class="grid-two" >
+        <section style="margin: 20px 0; ">
+            <div class="grid-two">
 
-                    
-                    <div class="grid-item" data-label="XRP">
-                       <a href="https://apps.apple.com/">
-                        <img src="images/AppStore_w-01.svg">
-                    </a> 
-                       
-                    </div>
-                    
-                    <div class="grid-item" data-label="Apple Pay">
-                       <a href="https://store.google.com/">
-                        <img src="images/Gplay_w-01.svg">
-                    </a> 
-                    </div>
-                    
-                    
+
+                <div class="grid-item2" data-label="XRP">
+                    <a href="https://apps.apple.com/">
+                        <img src="gallery/AppStore_w-01.svg">
+                    </a>
 
                 </div>
 
-            </section>
+                <div class="grid-item2" data-label="Apple Pay">
+                    <a href="https://store.google.com/">
+                        <img src="gallery/Gplay_w-01.svg">
+                    </a>
+                </div>
 
+
+
+            </div>
+
+        </section>
     </section>
     <div class="container">
         <div style="max-width: 1160px; padding-left: 60px; height: 500px; 
@@ -1851,15 +1926,16 @@ background-image: url('images/image1.jfif');
     </section>
     <div style=" margin-top: 30px; padding: 30px;">
         <h2 style="text-align: center; ">
-          <img class="imgx" src="images/XGreen_Energy.svg" alt="logox">  
-        </h2><p></p>
+            <img class="imgx" src="images/XGreen_Energy_-01.svg" alt="logox">
+        </h2>
+        <p></p>
 
         <div>
 
 
             <p class="hero-tag" style="line-height: 160%;">
-                
-               The green energy key, is the new reality of a self-sustaining energy economy, where green
+
+                The green energy key, is the new reality of a self-sustaining energy economy, where green
                 energy is a fundamental asset, tokenized into XRG and implemented on the XRP Ledger (XRPL)
                 in compliance with the ISO 20022 standard.
             </p>
@@ -1964,8 +2040,7 @@ background-image: url('images/image1.jfif');
 
             <div class="about-text">
 
-                <img class="card-about-img" src="images/green-clean-mining.webp"
-                     alt="">
+                <img class="card-about-img" src="images/green-clean-mining.webp" alt="">
                 <h3>Green clean mining</h3>
                 <p> Green energy + liquid immersion cooling = eco-friendly mining with zero carbon footprint.
                 </p>
@@ -2040,34 +2115,37 @@ background-image: url('images/image1.jfif');
         </div>
 
     </section>
-    <section class="container grid-row backgroundimg" style="margin: auto;" >
+    <section class="container grid-row backgroundimg" style="margin: auto;">
         <div class="image-column">
             <img src="images/Transparent.gif">
         </div>
         <div class="text-column">
-            <h2><img class="imgy" src="images/XGreen_Energy.svg" alt="logox"></h2>
-            <p >is the new reality of a self-sustaining energy economy, where green energy is a 
-                fundamental asset, 
-                tokenized into XRG and implemented on the XRP Ledger (XRPL) in compliance with 
+            <h2><img class="imgy" src="images/XGreen_Energy_-01.svg" alt="logox"></h2>
+            <p>is the new reality of a self-sustaining energy economy, where green energy is a
+                fundamental asset,
+                tokenized into XRG and implemented on the XRP Ledger (XRPL) in compliance with
                 the ISO 20022 standard.
             </p>
         </div>
         <div class="text-column">
             <h2>Connect the two worlds</h2>
             <p class="">Connecting virtual reality (gameplay) with the
-                 real world
+                real world
             </p>
         </div>
-        <div class="image-column video-vimeo" >
-    <div  style="position:relative; width:100%; max-width: 100vw; height: 100%; height: 240px;
+        <div class="image-column video-vimeo">
+            <div style="position:relative; width:100%; max-width: 100vw; height: 100%; height: 240px;
     display: flex; align-items: center;">
-        <iframe src="https://player.vimeo.com/video/1155431266?badge=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-        style="width:100%;height:300px;" 
-        title="green island CO2.Support (CO2)">
-    </iframe>
-</div>
+                <iframe
+                    src="https://player.vimeo.com/video/1155431266?badge=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" style="width:100%;height:300px;"
+                    title="green island CO2.Support (CO2)">
+                </iframe>
+            </div>
         </div>
-        
+
         <div class="image-column">
             <img src="images/2.webp">
         </div>
@@ -2075,7 +2153,7 @@ background-image: url('images/image1.jfif');
             <h2>New standard class of assets</h2>
             <p class="">Tokenization green energy solutions </p>
         </div>
-        
+
         <div class="text-column">
             <h2>Manage your energy</h2>
             <p class="">Energy in everything around us </p>
@@ -2083,8 +2161,8 @@ background-image: url('images/image1.jfif');
         <div class="image-column">
             <img src="images/1.webp">
         </div>
-        
-        
+
+
 
     </section>
     <!-- Contact Section -->
@@ -2141,7 +2219,7 @@ background-image: url('images/image1.jfif');
                     <p>We love our customers, so feel free to visit
                         during working hours.</p>
                     <br>
-                    <h3><img class="imgx" src="images/XGreen_Energy.svg" alt="logox"></h3>
+                    <h3><img class="imgx" src="images/XGreen_Energy_-01.svg" alt="logox"></h3>
                     <p> Ave of Stars, Tsim Sha Tsui, Hong Kong</p>
                 </div>
                 <div class="contact-mailto">
@@ -2192,9 +2270,11 @@ background-image: url('images/image1.jfif');
                     class="text-gradient">t.me/x_green_energy</span></a>
             <p class="cta-tel-2">Get 10% Off Your First Contribution to Protecting
                 Nature! Invest in the future, reduce
-                <a class="co222" style="display :inline-flex ;text-decoration-line: none; white-space: collapse;" href="https://co2.support/">
-                    <img class="co21" src="images/СО2logo.svg" alt="logo2">
-                </a>emissions and support green technologies — start today!
+                <a class="co222"
+                    style="margin-bottom: -20px; display :inline-flex ;text-decoration-line: none; white-space: collapse;"
+                    href="https://co2.support/">
+                    <img class="co21" style="margin: 1px 4px ;" src="images/СО2logo.svg" alt="logo2">
+                </a>, emissions and support green technologies &hyphen; start today!
             </p>
 
 
@@ -2219,27 +2299,24 @@ background-image: url('images/image1.jfif');
 
 
         </div>
-<section style="margin: auto ; place-items: center; display: block;">
-        <div style="display:block; margin: auto; align-items: center;" class="copyright">
-        <p style="margin-left: -10px;">Copyright &copy; 2025 <br/></p>      
-        <p style="display: inline-flex; padding: 10px;"> 
-              
-                <a class="co222 co2221" 
-                href="https://xgreen.energy/">
-                <img class="imgz" 
-                   src="images/XGreen_Energy.svg" alt="logox">
-                </a>
-                 <span style="display: inline-flex;">&amp;</span>
-                <a class="co222 co2221" 
-                href="https://co2.support/">
-                    <img class="imgw" src="images/Support.svg" alt="logoCO2"></a>
+        <section style="margin: auto ; place-items: center; display: block;">
+            <div style="display:block; margin: auto; align-items: center;" class="copyright">
+                <p style="margin-left: -10px;">Copyright &copy; 2025 <br /></p>
+                <p style="display: inline-flex; padding: 10px;">
 
+                    <a class="co222 co2221" href="https://xgreen.energy/">
+                        <img class="imgz" src="images/XGreen_Energy_-01.svg" alt="logox">
+                    </a>
+                    <span style="display: inline-flex;">&amp;</span>
+                    <a class="co222 co2221" href="https://co2.support/">
+                        <img class="imgw" src="images/Support_1-01.svg" alt="logoCO2"></a>
+
+                </p>
+
+            </div>
+            <p class="copyright" style="display: block; margin:-30px auto 10px auto; padding-left: 24px;">
+                All Rights Reserved.
             </p>
-          
-        </div>
-         <p class="copyright" style="display: block; margin:-30px auto 10px auto; padding-left: 24px;">
-            All Rights Reserved.
-           </p>
             <p class="copyright" style="margin:-20px auto  0 auto; padding-left: 30px;">
                 <a href="/" class="info-b">Privacy
                     Policy</a> |
@@ -2247,7 +2324,7 @@ background-image: url('images/image1.jfif');
                     Service</a>
 
             </p>
-</section>
+        </section>
         </div>
     </footer>
     <script src="https://player.vimeo.com/api/player.js"></script>
