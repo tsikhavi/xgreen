@@ -208,7 +208,7 @@
         }
 
         .imgw {
-            width: 130px;
+            width: 300px;
             height: auto;
             padding: 0 2px;
             display: inline-flex;
@@ -799,6 +799,12 @@
         }
 
         @media (max-width: 768px) {
+            .imgw {
+            width: 230px;
+            height: auto;
+            padding: 0 2px;
+            display: inline-flex;
+        }
             .masonry-grid {
                 columns: 2;
             }
@@ -927,7 +933,7 @@
 
             .token-address {
                 text-align: center;
-                font-size: small;
+                font-size: 11px;
             }
         }
 
@@ -980,17 +986,19 @@
         }
 
         .grid-two {
-            display: flex;
+            display: grid;
             gap: 0rem;
+            grid-template-columns: repeat(2, 1fr);
             /* breathing space between cards */
-            max-width: 100%;
+            max-width: 100vw;
             margin: 0 auto;
             place-items: center;
-            justify-content: space-around;
-            width: screen;
+            width: 80vw;
+           
         }
-        .grid-two img{
-            width: 200px;
+        .grid-item2{
+            width: 40vw;
+            
 
         }
 
@@ -1033,6 +1041,26 @@
             max-width: 100%;
             margin: 20px auto;
             place-items: center;
+        }
+        .grid-two {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            /* three equal columns */
+            gap: 0rem;
+            /* breathing space between cards */
+            width: 100%;
+            margin: auto;
+            place-items: center;
+        }
+
+        .grid-two img{
+            width: 100%;
+
+        }
+        .grid-item2{
+            width: 90vw;
+            
+
         }
 
             .grid-item {
@@ -1125,16 +1153,16 @@
         <header>
             <div class="logo-container">
                 <a class="logo" href="/">
-                    <img style="width: 280px;" src="gallery/Transparent2.gif" alt="logo">
+                    <img style="width: 280px;" src="gallery/Transparent.gif" alt="logo">
                 </a>
             </div>
-            <!-- <p style=" justify-content: center; padding-bottom: 40px; 
+            <p style=" justify-content: center; padding-bottom: 40px; 
                 font-size: 24px; ;margin: -35px auto 0 auto; font-weight: 600;
                 max-width: fit-content; ">
                 <span>
-                    <img class="logox" src="gallery/Support.svg" alt="logo">
+                    <img class="logox" src="gallery/Support_1-01.svg" alt="logo">
                 </span>
-            </p>-->
+            </p>
 
         </header>
 
@@ -1160,7 +1188,11 @@
                             <img src="gallery/Apay_w-01.svg">
                         </a>
                     </div>
-                    
+                    <div class="grid-item" data-label="RLUSD">
+                        <a href="https://xpmarket.com/amm/pool/CO2-rNqb5BzLoR1NENpKBnrDsgLvP5C9SMbwUp/RLUSD-rMxCKbEDwqr76QuheSUMdEGf4B9xJ8m5De">
+                            <img src="gallery/RLUSD_w-01.svg">
+                        </a>
+                    </div>
                     <div class="grid-item" data-label="XRP">
                         <a href="https://xpmarket.com/amm/pool/CO2-rNqb5BzLoR1NENpKBnrDsgLvP5C9SMbwUp/XRP">
                           <img src="gallery/XRP_w-01.svg">  
@@ -1169,33 +1201,19 @@
                     </div>
                     
                     
-                    <div class="grid-item" data-label="VISA">
-                        <a href="https://www.visa.com/en-us">
-                            <img src="gallery/visa_w-01.svg">
-                        </a>
-                    </div>
-                    <div class="grid-item" data-label="Google Pay">
-                       <a href="https://pay.google.com/">
-                        <img src="gallery/Gpay_w-01.svg">
-                       </a> 
-                    </div>
-                    <div class="grid-item" data-label="RLUSD">
-                        <a href="https://xpmarket.com/amm/pool/CO2-rNqb5BzLoR1NENpKBnrDsgLvP5C9SMbwUp/RLUSD-rMxCKbEDwqr76QuheSUMdEGf4B9xJ8m5De">
-                            <img src="gallery/RLUSD_w-01.svg">
-                        </a>
-                    </div>
-                    <div class="grid-item" data-label="Master Card">
-                        <a href="https://www.mastercard.com/global/en.html">
-                            <img src="gallery/mastercard_w-01.svg">
-                        </a>
-                    </div>
+                   
+                    
+                    
+                   
 
                 </div>
 
             </section>
             <h1 class="text-bilbao-50">
                 Join the Movement to Save the Planet with
-                <br>CO2.Support (CO2)
+                <br><a class="co222 co2221" href="https://co2.support/">
+                        <img class="imgw" src="gallery/Support_1-01.svg" alt="CO2 Support logo">
+                    </a>
             </h1>
             <p class="hero-tagline text-bilbao-200">
                 Eco-friendly solutions for a better world
@@ -1221,18 +1239,18 @@
             </a>
         </div>
 
-        <section style="margin: 20px auto; width: 100%;">
+        <section style="margin: 20px 0; ">
                 <div class="grid-two" >
 
                     
-                    <div class="grid-item" data-label="XRP">
+                    <div class="grid-item2" data-label="XRP">
                        <a href="https://apps.apple.com/">
                         <img src="gallery/AppStore_w-01.svg">
                     </a> 
                        
                     </div>
                     
-                    <div class="grid-item" data-label="Apple Pay">
+                    <div class="grid-item2" data-label="Apple Pay">
                        <a href="https://store.google.com/">
                         <img src="gallery/Gplay_w-01.svg">
                     </a> 
@@ -1256,17 +1274,24 @@
 
     <!-- About CO2 -->
     <div class="container" style="margin: 30px auto; padding-left: 20px; max-width: 1200px; ">
-        <h2 style="text-align: center; color: var(--bilbao-300);">
-            About CO2.Support (CO2)
+        <h2 style="text-align: center; font-size: large;  color: var(--bilbao-50); ">
+            About <a class="co222" href="https://co2.support/">
+                        <img style="width: 160px; height: auto; margin-bottom: -5px;" src="gallery/Support_1-01.svg" 
+                        alt="CO2 Support logo">
+                    </a>
         </h2>
-        <section class=" grid-row " style="padding: 40px 0 40px 0; margin: auto;">
+       
+        <section class=" grid-row " style="padding: 40px  0 40px 0; margin: auto;">
             <div class="image-column about-img" >
                 <img src="gallery/about.webp" alt="About CO2.Support">
             </div>
             <div class="text-column">
                 <h2 class="text-bilbao-200">Our Mission</h2>
                 <p class="text-bilbao-50">
-                    At CO2 Support, we are dedicated to providing eco-friendly
+                    At <span><a class="co222" href="https://co2.support/">
+                        <img style="width: 150px; height: auto; margin-bottom: -5px;" src="gallery/Support_1-01.svg" 
+                        alt="CO2 Support logo">
+                    </a></span>, we are dedicated to providing eco-friendly
                     solutions for businesses and individuals alike. Our mission is
                     to help protect the environment and promote sustainability
                     through our services.
@@ -1283,7 +1308,9 @@
     <!-- Features / Gallery section – Bilbao background applied -->
     <div class="container bodys" style="background-color: var(--bilbao-800); padding: 20px;">
         <h1 class="text-bilbao-100">
-            Green Scenes: A Photo Gallery of Our Environmental and Ecological Projects
+            Green Scenes:
+            An Image Collection of Our Ecological and Environmental Initiatives
+        
         </h1>
 
         <div class="masonry-grid">
@@ -1305,7 +1332,7 @@
         <div class="text-column">
             <h2><img class="imgy" src="gallery/Support_1-01.svg" alt="CO2 Support logo"></h2>
             <p class="text-bilbao-100">is the first green token, on the XRP Ledger (XRPL)
-                based on the <img class="imgy" src="gallery/XGreen_Energy.svg" alt="XGreen Energy logo"> economy, a
+                based on the <img class="imgy" src="gallery/XGreen_Energy_-01.svg" alt="XGreen Energy logo"> economy, a
                 pioneer in tokenizing the benefits of
                 reducing carbon emissions compliant with the ISO 20022.
             </p>
@@ -1427,7 +1454,7 @@
                 Get 15% Off Your First Contribution to Protecting Nature! Invest in the future, reduce
                 <a class="co222" style="text-decoration-line: none;" href="https://co2.support/">
                     <img class="co21" src="gallery/СО2logo.svg" alt="CO2 logo">
-                </a>, and support green technologies—start today!
+                </a> emissions, and support green technologies &hyphen; start today!
             </p>
 
             <div class="social-links">
@@ -1449,11 +1476,12 @@
                     &copy; 2025</p>
                 <p style="display: inline-flex; padding: 3px;">
                     <a class="co222 co2221" href="https://xgreen.energy/">
-                        <img class="imgz" src="gallery/XGreen_Energy.svg" alt="XGreen Energy logo">
+                        <img class="imgz" src="gallery/XGreen_Energy_-01.svg" alt="XGreen Energy logo">
                     </a>
                     <span style="display: inline-flex; color: var(--bilbao-200);">&amp;</span>
                     <a class="co222 co2221" href="https://co2.support/">
-                        <img class="imgw" src="gallery/Support.svg" alt="CO2 Support logo">
+                        <img class="imgz" src="gallery/Support_1-01.svg" 
+                        alt="CO2 Support logo">
                     </a>
                 </p>
             </div>
