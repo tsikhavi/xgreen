@@ -1001,8 +1001,6 @@
 
         .grid-item2 {
             width: 40vw;
-
-
         }
 
         /* every element gets a consistent card look */
@@ -1048,7 +1046,7 @@
 
             .grid-two {
                 display: grid;
-                grid-template-columns: repeat(1, 1fr);
+                grid-template-columns: repeat(2, 1fr);
                 /* three equal columns */
                 gap: 0rem;
                 /* breathing space between cards */
@@ -1063,7 +1061,7 @@
             }
 
             .grid-item2 {
-                width: 90vw;
+                width: 40vw;
 
 
             }
@@ -1154,13 +1152,13 @@
 <body>
     <!-- Header -->
     <section class="hero " id="home">
-        <header>
+        <header >
             <div class="logo-container">
                 <a class="logo" href="/">
                     <img style="width: 280px;" src="gallery/Transparent.gif" alt="logo">
                 </a>
             </div>
-            <p style=" justify-content: center; padding-bottom: 40px; 
+            <p style=" justify-content: center; padding-bottom: 10px; 
                 font-size: 24px; ;margin: -35px auto 0 auto; font-weight: 600;
                 max-width: fit-content; ">
                 <span>
@@ -1169,21 +1167,7 @@
             </p>
 
         </header>
-
-        <!-- Hero Section with Bilbao token box -->
-        <div class="container" style="padding: 4px 40px;">
-            <div class="rounded-box border-bilbao-700" style="border-color: var(--bilbao-300);">
-                <p style="display: flex; justify-content: center; margin-top: -5px; color: var(--bilbao-100);">
-                    Token Address:
-                </p>
-                <p style="white-space: nowrap;">
-                    <a class="token-address text-bilbao-200"
-                        href="https://xpmarket.com/token/XRG-rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp">
-                        rNqb5BzLoR1NENpKBnrDsgLvP5C9SMbwUp
-                    </a>
-                </p>
-            </div>
-            <section style="margin: 20px auto; 
+<section style="margin: 0 auto 20px auto;  
             width: 85%; border-radius: 2rem; padding: 10px 0;">
                 <div class="grid-six">
 
@@ -1214,13 +1198,27 @@
                 </div>
 
             </section>
+        <!-- Hero Section with Bilbao token box -->
+        <div class="container" style="padding: 4px 40px;">
+            <div class="rounded-box border-bilbao-700" style="border-color: var(--bilbao-300);">
+                <p style="display: flex; justify-content: center; margin-top: -5px; color: var(--bilbao-100);">
+                    Token Address:
+                </p>
+                <p style="white-space: nowrap;">
+                    <a class="token-address "
+                        href="https://xpmarket.com/token/XRG-rUo5UNKiRGhLq4LVgbCzvx53DH65cgk5Dp">
+                        rNqb5BzLoR1NENpKBnrDsgLvP5C9SMbwUp
+                    </a>
+                </p>
+            </div>
+            
             <h1 class="text-bilbao-50">
                 Join the Movement to Save the Planet with
                 <br><a class="co222 co2221" href="https://co2.support/">
                     <img class="imgw" src="gallery/Support_1-01.svg" alt="CO2 Support logo">
                 </a>
             </h1>
-            <p class="hero-tagline text-bilbao-200">
+            <p class="hero-tagline ">
                 Eco-friendly solutions for a better world
             </p>
         </div>
@@ -1291,7 +1289,7 @@
                 <img src="gallery/about.webp" alt="About CO2.Support">
             </div>
             <div class="text-column">
-                <h2 class="text-bilbao-200">Our Mission</h2>
+                <h2 class="">Our Mission</h2>
                 <p class="text-bilbao-50">
                     At <span><a class="co222" href="https://co2.support/">
                             <img style="width: 150px; height: auto; margin-bottom: -5px;" src="gallery/Support_1-01.svg"
@@ -1336,14 +1334,14 @@
         </div>
         <div class="text-column">
             <h2><img class="imgy" src="gallery/Support_1-01.svg" alt="CO2 Support logo"></h2>
-            <p class="text-bilbao-100">is the first green token, on the XRP Ledger (XRPL)
+            <p >is the first green token, on the XRP Ledger (XRPL)
                 based on the <img class="imgy" src="gallery/XGreen_Energy_-01.svg" alt="XGreen Energy logo"> economy, a
                 pioneer in tokenizing the benefits of
                 reducing carbon emissions compliant with the ISO 20022.
             </p>
         </div>
         <div class="text-column">
-            <h2 class="text-bilbao-200">Connect the two worlds</h2>
+            <h2 class="">Connect the two worlds</h2>
             <p class="text-bilbao-50">Connecting virtual reality (gameplay) with the real world</p>
         </div>
         <div class="image-column video-vimeo">
@@ -1361,7 +1359,7 @@
 
     <!-- Contact Section -->
     <section class="container" id="contact">
-        <h2 class="section-title text-bilbao-200">Contact Us</h2>
+        <h2 class="section-title ">Contact Us</h2>
         <div class="contact-container">
             <!-- Contact Form -->
             <div class="contact-form">
@@ -1380,7 +1378,7 @@
                     <div class="form-group" style="display: inline-flex; justify-content: space-between; width: 100%;">
                         <label class="info-a"><i class="fa-solid fa-paperclip"></i>Attach Files</label>
                         <input type="file" id="fileInput" style="display: none;">
-                        <p class="text-bilbao-200">Attachments (0)</p>
+                        <p class="">Attachments (0)</p>
                     </div>
                     <div class="form-group">
                         <div class="g-recaptcha" data-sitekey="6LfL6cApAAAAAKGQZcBqnyw2qg"></div>
@@ -1399,11 +1397,11 @@
             <!-- Contact Info with Bilbao -->
             <div>
                 <div class="info-card">
-                    <h3 class="text-bilbao-200">Better yet, see us in person!</h3>
+                    <h3 class="">Better yet, see us in person!</h3>
                     <p class="text-bilbao-50">We love our customers, so feel free to visit during working hours.</p>
                     <br>
                     <h3><img class="imgx" src="gallery/Support_1-01.svg" alt="XGreen Energy logo"></h3>
-                    <p class="text-bilbao-100">Ave of Stars, Tsim Sha Tsui, Hong Kong</p>
+                    <p class="text-bilbao-100" style="text-align: center;">Ave of Stars, Tsim Sha Tsui, Hong Kong</p>
                 </div>
                 <div class="contact-mailto">
                     <a class="info-c text-bilbao-400" rel="" href="mailto:contact@xgreen.energy">
@@ -1455,7 +1453,7 @@
                 <button type="submit" class="btn btn-primary">Sign up</button>
             </div>
 
-            <p class="cta-tel-2 text-bilbao-200">
+            <p class="cta-tel-2 ">
                 Get 15% Off Your First Contribution to Protecting Nature! Invest in the future, reduce
                 <a class="co222" style="text-decoration-line: none;" href="https://co2.support/">
                     <img class="co21" src="gallery/СО2logo.svg" alt="CO2 logo">
@@ -1477,7 +1475,7 @@
 
         <section style="margin: auto; place-items: center; display: block;">
             <div style="display:block; margin: auto; align-items: center;" class="copyright">
-                <p class="text-bilbao-100 " style="text-align: center; font-size: small; margin-left: -18px; ">Copyright
+                <p class="text-bilbao-100 " style="text-align: center; font-size: small; margin-left: -10px; ">Copyright
                     &copy; 2025</p>
                 <p style="display: inline-flex; padding: 3px;">
                     <a class="co222 co2221" href="https://xgreen.energy/">
